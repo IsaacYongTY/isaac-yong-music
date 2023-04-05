@@ -37,9 +37,9 @@ export default function ComingSoon(): JSX.Element {
 
                 <div className={cx("text-container")}>
                     <div className={cx("header")}>COMING SOON 2023</div>
-                    <h3 className={cx("subtitle")}>
+                    <div className={cx("subtitle")}>
                         WEBSITE REVAMP IN PROGRESS
-                    </h3>
+                    </div>
                 </div>
 
                 <div className={cx("social-media-container")}>
