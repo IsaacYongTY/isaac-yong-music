@@ -4,13 +4,12 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Header from "@/src/components/Header";
 import ComingSoon from "@/src/pages/coming-soon";
+import { ENABLE_COMING_SOON_REDIRECT } from "flags";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-    console.log(process.env.NODE_ENV);
-
-    if (process.env.NODE_ENV === "production") {
+    if (ENABLE_COMING_SOON_REDIRECT) {
         return <ComingSoon />;
     }
 
