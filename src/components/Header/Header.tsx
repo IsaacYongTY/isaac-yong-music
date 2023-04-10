@@ -5,16 +5,17 @@ import Link from "next/link";
 import IsaacYongSignature from "public/isaac-yong-signature.png";
 import styles from "./Header.module.scss";
 import Image from "next/image";
+import { menu } from "@/src/common/constants";
 const cx = classnames.bind(styles);
 const Header: React.FC = () => {
     return (
         <div className={cx("container")}>
             <div className={cx("links-container")}>
-                <Link href="/about-me">ABOUT</Link>
-                <Link href="/music">MUSIC</Link>
-                <Link href="/videos">VIDEOS</Link>
-                {/*//TODO: to think of proper title*/}
-                <Link href="/calendar">CALENDAR</Link>
+                {menu.slice(0, Math.ceil(menu.length / 2)).map((item) => (
+                    <Link key={item.href} href={item.href}>
+                        {item.name}
+                    </Link>
+                ))}
             </div>
 
             <Link href="/">
@@ -25,19 +26,28 @@ const Header: React.FC = () => {
                 />
             </Link>
             <div className={cx("links-container")}>
-                {/*<Link href="/shop">SHOP</Link>*/}
-                <Link href="/music-sheet">MUSIC SHEETS</Link>
-                {/*//TODO: show dropdown*/}
-                <div className={cx("dropdown-container")}>
-                    <Link href="/contact-us">SERVICES</Link>
-                    <div className={cx("dropdown-menu")}>
-                        <Link href="/events">EVENTS</Link>
-                        <Link href="/consultations">CONSULTATIONS</Link>
-                        <Link href="/lessons">LESSONS</Link>
-                    </div>
-                </div>
-                <Link href="/contact-us">GET IN TOUCH</Link>
-                {/*<Link href="/blog">BLOG</Link>*/}
+                {menu.slice(Math.ceil(menu.length / 2)).map((item) => (
+                    <>
+                        {item.submenu ? (
+                            <div className={cx("dropdown-container")}>
+                                <Link key={item.href} href={item.href}>
+                                    {item.name}
+                                </Link>
+                                <div className={cx("dropdown-menu")}>
+                                    {item.submenu.map((sub) => (
+                                        <Link key={sub.href} href={sub.href}>
+                                            {sub.name}
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+                        ) : (
+                            <Link key={item.href} href={item.href}>
+                                {item.name}
+                            </Link>
+                        )}
+                    </>
+                ))}
             </div>
         </div>
     );

@@ -10,6 +10,7 @@ import ContactForm from "@/src/components/ContactForm";
 import { ThemeProvider, createTheme } from "@mui/material";
 import Jumbotron from "@/src/components/Jumbotron";
 import { useEffect, useState } from "react";
+import SectionHeader from "@/src/components/SectionHeader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,8 +26,7 @@ export default function Home() {
 
     useEffect(() => {
         const handleScroll = () => {
-            console.log(window.innerHeight);
-            if (window.scrollY > window.innerHeight) {
+            if (window.scrollY > window.innerHeight - 100) {
                 setShowNavigationBar(true);
                 return;
             }
@@ -61,12 +61,16 @@ export default function Home() {
             <main className={cx("main")}>
                 <ThemeProvider theme={CustomFontTheme}>
                     <Jumbotron />
-                    {showNavigationBar && <Header />}
-                    {/*// TODO: refactor to separate component*/}
-                    <div className={cx("section-header")}>
-                        <h1>Performance Schedule</h1>
+                    <div className={cx("header-container")}>
+                        {showNavigationBar ? (
+                            <Header />
+                        ) : (
+                            <div className={cx("header-placeholder")} />
+                        )}
                     </div>
-                    <ContactForm />
+
+                    <SectionHeader title="Get in Touch" />
+
                     <ContactForm />
                     <ContactForm />
                 </ThemeProvider>

@@ -7,6 +7,11 @@
     min-height: 100vh;
     background-color: #353535;
 
+    .header-container {
+        .header-placeholder {
+            min-height: 124px;
+        }
+    }
     .section-header {
         //background-color: antiquewhite;
         border-top: 0.6rem solid white;

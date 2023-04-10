@@ -1,0 +1,12 @@
+@import "styles/Common.scss";
+
+.container {
+    height: 100vh;
+    background-color: $primary-dark;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 70px;
+}

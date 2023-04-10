@@ -1,12 +1,13 @@
 .container {
     width: 70rem;
     padding: 4rem;
-    min-height: 400px;
+    min-height: 450px;
     background: antiquewhite;
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
     border-radius: 1.6rem;
+    margin-bottom: 2.4rem;
 
     .snackbar {
         font-size: 1.6rem;
