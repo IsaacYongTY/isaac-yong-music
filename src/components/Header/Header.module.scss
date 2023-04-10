@@ -2,16 +2,22 @@
 
 .container {
     background-color: #231e1e;
-    width: 100vw;
+    width: 100%;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 4rem;
+    box-sizing: border-box;
     height: 124px;
     z-index: 2; // to be on top of MUI TextField text
 
     .links-container {
+        @media only screen and (max-width: 768px) {
+            display: none;
+            visibility: hidden;
+        }
+
         display: flex;
         justify-content: center;
         text-transform: uppercase;

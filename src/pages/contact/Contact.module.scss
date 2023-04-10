@@ -2,9 +2,9 @@
 
 .container {
     background-color: $primary-dark;
-    width: 100%;
+    width: 100vw;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     padding-bottom: 70px;
@@ -12,14 +12,18 @@
 
     .subtitle {
         height: 10rem;
+        width: 60rem;
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
         justify-content: center;
         align-items: center;
-        width: 60rem;
         text-align: center;
         margin: 2.4rem;
         color: $gold;
+
+        @media only screen and (max-width: 768px) {
+            width: 90%;
+        }
     }
 }

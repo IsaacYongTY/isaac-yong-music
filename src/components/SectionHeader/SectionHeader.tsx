@@ -11,9 +11,5 @@ type SectionHeaderProps = {
 export default function SectionHeader({
     title,
 }: SectionHeaderProps): JSX.Element {
-    return (
-        <div className={cx("container")}>
-            <h2>{title}</h2>
-        </div>
-    );
+    return <div className={cx("container")}>{title}</div>;
 }

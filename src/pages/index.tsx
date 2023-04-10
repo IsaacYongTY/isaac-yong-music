@@ -1,17 +1,21 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.scss";
-import Header from "@/src/components/Header";
-import SocialMedia from "@/src/pages/coming-soon";
-import { ENABLE_COMING_SOON_REDIRECT } from "flags";
-import classnames from "classnames/bind";
-import ContactForm from "@/src/components/ContactForm";
-import { ThemeProvider, createTheme } from "@mui/material";
-import Jumbotron from "@/src/components/Jumbotron";
 import { useEffect, useState } from "react";
+import Head from "next/head";
+import { Inter } from "@next/font/google";
+import classnames from "classnames/bind";
+import dynamic from 'next/dynamic';
+
+import ComingSoon from "@/src/pages/coming-soon";
+import Header from "@/src/components/Header";
+import Jumbotron from "@/src/components/Jumbotron";
 import SectionHeader from "@/src/components/SectionHeader";
 
+import { ENABLE_COMING_SOON_REDIRECT } from "flags";
+
+import styles from "@/styles/Home.module.scss";
+
+// dynamic needed to bypass hydration error
+// Ref: https://nextjs.org/docs/messages/react-hydration-error
+const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 const inter = Inter({ subsets: ["latin"] });
 
 const cx = classnames.bind(styles);
@@ -35,7 +39,7 @@ export default function Home() {
     }, []);
 
     if (ENABLE_COMING_SOON_REDIRECT) {
-        return <SocialMedia />;
+        return <ComingSoon />;
     }
 
     return (
@@ -62,11 +66,12 @@ export default function Home() {
                     <div className={cx("header-placeholder")} />
                 )}
 
-                <SectionHeader title="Get in Touch" />
-
-                <ContactForm />
-                <ContactForm />
-                <ContactForm />
+                <SectionHeader title="Performance Schedule" />
+                <SectionHeader title="Events" />
+                <SectionHeader title="Latest Release" />
+                <ReactPlayer url="https://www.youtube.com/playlist?list=PL020eiw54Omc-1TCgbD2BpcxMhIp9W-jn" />
+                <SectionHeader title="Recent Events" />
+                <SectionHeader title="Original Songs" />
             </main>
         </>
     );

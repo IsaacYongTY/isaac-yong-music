@@ -39,13 +39,13 @@ export default function Jumbotron(): JSX.Element {
                 <div className={cx("content")}>
                     <Image
                         src={IsaacYongSignature}
-                        width={400}
+                        width={700}
                         alt="isaac-yong-signature"
                     />
 
                     <div className={cx("text-container")}>
                         <div className={cx("subtitle")}>
-                            WEBSITE REVAMP IN PROGRESS
+                            SINGER-SONGWRITER. MUSICIAN.
                         </div>
                     </div>
 

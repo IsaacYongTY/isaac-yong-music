@@ -5,7 +5,7 @@ import Head from "next/head";
 
 import IsaacYongSignature from "@/public/isaac-yong-signature.png";
 import InMusicIsaacWithGuitar from "@/public/inmusic-isaac-with-guitar.jpg";
-import SocialMedia from "@/src/components/SocialMedia/SocialMedia";
+import SocialMedia from "@/src/components/SocialMedia";
 
 import styles from "./ComingSoon.module.scss";
 

@@ -13,7 +13,7 @@ export const menu: MenuItem[] = [
         name: "Music",
     },
     {
-        href: "/",
+        href: "/videos",
         name: "Videos",
     },
     {
@@ -21,7 +21,7 @@ export const menu: MenuItem[] = [
         name: "Calendar",
     },
     {
-        href: "/",
+        href: "/music-sheets",
         name: "Music Sheets",
     },
     {
