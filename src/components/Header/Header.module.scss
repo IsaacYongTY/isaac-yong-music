@@ -9,6 +9,7 @@
     align-items: center;
     padding: 0 40px;
     height: 124px;
+    z-index: 2; // to be on top of MUI TextField text
 
     .links-container {
         display: flex;
@@ -28,6 +29,7 @@
 
             &:hover {
                 border-bottom: 3px solid white;
+                font-weight: 700;
             }
 
             .dropdown-menu {
@@ -62,16 +64,12 @@
                     overflow: hidden;
                     visibility: hidden;
                 }
-
-                &:hover {
-                    font-weight: 700;
-                }
             }
         }
 
         .selected {
-            font-weight: 700;
             border-bottom: 3px solid white;
+            font-weight: 700;
         }
     }
 }
