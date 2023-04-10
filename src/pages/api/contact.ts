@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import * as SibApiV3Sdk from "sib-api-v3-typescript";
+import * as SibApiV3Sdk from "@sendinblue/client";
 
 type Data = {
     name?: string;
