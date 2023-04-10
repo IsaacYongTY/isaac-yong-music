@@ -3,23 +3,33 @@
 .container {
     background-color: #231e1e;
     width: 100vw;
-    min-height: 80px;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 40px;
-    position: sticky;
-    top: 0;
+    height: 124px;
 
     .links-container {
         display: flex;
-        a {
-            margin-right: 24px;
-        }
+        justify-content: center;
+        text-transform: uppercase;
+        gap: 24px;
+        letter-spacing: 2px;
+        width: 40rem;
+        height: 100%;
 
-        .dropdown-container {
-            position: relative;
+        .link-container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            border-bottom: 3px solid #231e1e;
+            box-sizing: border-box;
+
+            &:hover {
+                border-bottom: 3px solid white;
+            }
+
             .dropdown-menu {
                 display: none;
             }
@@ -28,16 +38,45 @@
                 .dropdown-menu {
                     display: flex;
                     flex-direction: column;
+                    justify-content: center;
                     position: absolute;
+                    top: 80px;
                     height: min-content;
-                    background-color: #1c1c1c;
-                    padding: 12px 4px;
+                    background-color: $primary-dark;
+                    padding: 24px;
+                    border-radius: 8px;
+                    box-shadow: 3px 3px 20px #2d2d2d;
+                    gap: 16px;
+                    font-size: 1.2rem;
+                    z-index: 1;
+                }
+            }
 
-                    a {
-                        margin-bottom: 12px;
-                    }
+            > a {
+                // to set the width so the element does not move when it becomes bold
+                &::before {
+                    display: block;
+                    content: attr(title);
+                    font-weight: 700;
+                    height: 0;
+                    overflow: hidden;
+                    visibility: hidden;
+                }
+
+                &:hover {
+                    font-weight: 700;
                 }
             }
         }
+
+        .selected {
+            font-weight: 700;
+            border-bottom: 3px solid white;
+        }
     }
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
 }

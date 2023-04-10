@@ -6,6 +6,19 @@ const CustomFontTheme = createTheme({
     typography: {
         fontSize: 20,
     },
+    palette: {
+        // primary: {
+        //     main: '#0971f1',
+        // },
+        mode: "dark",
+        primary: {
+            main: "#9F7969",
+        }
+        // secondary: {
+        //     main: "#9F7969",
+        //     // contrastText: '#fff',
+        // },
+    },
 });
 export default function App({ Component, pageProps }: AppProps) {
     return (

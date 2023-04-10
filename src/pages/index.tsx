@@ -16,17 +16,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 const cx = classnames.bind(styles);
 
-const CustomFontTheme = createTheme({
-    typography: {
-        fontSize: 20,
-    },
-});
 export default function Home() {
     const [showNavigationBar, setShowNavigationBar] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > window.innerHeight - 100) {
+            if (window.scrollY > window.innerHeight - 20) {
                 setShowNavigationBar(true);
                 return;
             }
@@ -59,21 +54,18 @@ export default function Home() {
                 />
             </Head>
             <main className={cx("main")}>
-                <ThemeProvider theme={CustomFontTheme}>
-                    <Jumbotron />
-                    <div className={cx("header-container")}>
-                        {showNavigationBar ? (
-                            <Header />
-                        ) : (
-                            <div className={cx("header-placeholder")} />
-                        )}
-                    </div>
+                <Jumbotron />
 
-                    <SectionHeader title="Get in Touch" />
+                {showNavigationBar ? (
+                    <Header isSticky={true} />
+                ) : (
+                    <div className={cx("header-placeholder")} />
+                )}
 
-                    <ContactForm />
-                    <ContactForm />
-                </ThemeProvider>
+                <SectionHeader title="Get in Touch" />
+
+                <ContactForm />
+                <ContactForm />
             </main>
         </>
     );

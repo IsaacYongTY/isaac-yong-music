@@ -44,54 +44,58 @@ const ContactForm: React.FC = () => {
                 anchorOrigin={{ horizontal: "center", vertical: "bottom" }}
             />
 
-            <TextField
-                onChange={(e) => setEmail(e.target.value)}
-                label="Email"
-                variant="outlined"
-                value={email}
-                required
-            />
-
-            <div className={cx('name-input-container')}>
+            <div className={cx("form")}>
                 <TextField
-                    onChange={(e) => setFirstName(e.target.value)}
-                    label="First Name"
+                    onChange={(e) => setEmail(e.target.value)}
+                    label="Email"
                     variant="outlined"
-                    value={lastName}
-                    fullWidth
+                    value={email}
+                    required
+                />
+
+                <div className={cx("name-input-container")}>
+                    <TextField
+                        onChange={(e) => setFirstName(e.target.value)}
+                        label="First Name"
+                        variant="outlined"
+                        value={lastName}
+                        fullWidth
+                        required
+                    />
+                    <TextField
+                        onChange={(e) => setLastName(e.target.value)}
+                        label="Last Name"
+                        variant="outlined"
+                        value={lastName}
+                        fullWidth
+                        required
+                    />
+                </div>
+
+                <TextField
+                    onChange={(e) => setSubject(e.target.value)}
+                    label="Subject"
+                    variant="outlined"
+                    value={subject}
                     required
                 />
                 <TextField
-                    onChange={(e) => setLastName(e.target.value)}
-                    label="Last Name"
+                    onChange={(e) => setMessage(e.target.value)}
+                    label="Message"
                     variant="outlined"
-                    value={lastName}
-                    fullWidth
+                    multiline
+                    rows={8}
+                    value={message}
                     required
                 />
             </div>
 
-            <TextField
-                onChange={(e) => setSubject(e.target.value)}
-                label="Subject"
-                variant="outlined"
-                value={subject}
-                required
-            />
-            <TextField
-                onChange={(e) => setMessage(e.target.value)}
-                label="Message"
-                variant="outlined"
-                multiline
-                rows={8}
-                value={message}
-                required
-            />
             <div className={cx("button-container")}>
                 <Button
                     onClick={handleSubmit}
                     color="primary"
                     variant="contained"
+                    size="large"
                 >
                     Submit
                 </Button>

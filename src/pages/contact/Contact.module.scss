@@ -1,7 +1,6 @@
 @import "styles/Common.scss";
 
 .container {
-    height: 100vh;
     background-color: $primary-dark;
     width: 100%;
     display: flex;
@@ -9,4 +8,18 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 70px;
+    color: white;
+
+    .subtitle {
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        justify-content: center;
+        align-items: center;
+        width: 60rem;
+        text-align: center;
+        margin: 2.4rem;
+        color: $gold;
+    }
 }

@@ -13,7 +13,14 @@ export default function Contact(): JSX.Element {
     return (
         <div className={cx("container")}>
             <Header />
-            <SectionHeader title="Contact" />
+            <div className={cx("subtitle")}>
+                <div>Collaboration or live performances for your event?</div>
+                <div>
+                    Write to us and we will get back to you within 3 working
+                    days!
+                </div>
+            </div>
+            {/*<SectionHeader title="Contact" />*/}
             <ContactForm />
             <SocialMedia />
         </div>
