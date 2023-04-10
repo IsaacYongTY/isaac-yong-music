@@ -8,6 +8,8 @@ import { ENABLE_COMING_SOON_REDIRECT } from "flags";
 import classnames from "classnames/bind";
 import ContactForm from "@/src/components/ContactForm";
 import { ThemeProvider, createTheme } from "@mui/material";
+import Jumbotron from "@/src/components/Jumbotron";
+import { useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +19,26 @@ const CustomFontTheme = createTheme({
     typography: {
         fontSize: 20,
     },
-
 });
 export default function Home() {
+    const [showNavigationBar, setShowNavigationBar] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            console.log(window.innerHeight);
+            if (window.scrollY > window.innerHeight) {
+                setShowNavigationBar(true);
+                return;
+            }
+
+            setShowNavigationBar(false);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     if (ENABLE_COMING_SOON_REDIRECT) {
         return <SocialMedia />;
     }
@@ -41,11 +60,14 @@ export default function Home() {
             </Head>
             <main className={cx("main")}>
                 <ThemeProvider theme={CustomFontTheme}>
-                    <Header />
+                    <Jumbotron />
+                    {showNavigationBar && <Header />}
                     {/*// TODO: refactor to separate component*/}
                     <div className={cx("section-header")}>
                         <h1>Performance Schedule</h1>
                     </div>
+                    <ContactForm />
+                    <ContactForm />
                     <ContactForm />
                 </ThemeProvider>
             </main>

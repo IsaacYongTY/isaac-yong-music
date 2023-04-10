@@ -1,7 +1,7 @@
 @import "styles/Common.scss";
 
 .container {
-    background-color: $primary-dark;
+    background-color: #231e1e;
     width: 100vw;
     min-height: 80px;
     color: white;
@@ -9,6 +9,8 @@
     justify-content: center;
     align-items: center;
     padding: 0 40px;
+    position: sticky;
+    top: 0;
 
     .links-container {
         display: flex;

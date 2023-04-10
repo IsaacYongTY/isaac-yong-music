@@ -7,10 +7,10 @@ import IsaacYongSignature from "@/public/isaac-yong-signature.png";
 import InMusicIsaacWithGuitar from "@/public/inmusic-isaac-with-guitar.jpg";
 import SocialMedia from "@/src/components/SocialMedia/SocialMedia";
 
-import styles from "./ComingSoon.module.scss";
+import styles from "./Jumbotron.module.scss";
 
 const cx = classnames.bind(styles);
-export default function ComingSoon(): JSX.Element {
+export default function Jumbotron(): JSX.Element {
     return (
         <>
             <Head>
@@ -44,7 +44,6 @@ export default function ComingSoon(): JSX.Element {
                     />
 
                     <div className={cx("text-container")}>
-                        <div className={cx("header")}>COMING SOON 2023</div>
                         <div className={cx("subtitle")}>
                             WEBSITE REVAMP IN PROGRESS
                         </div>
