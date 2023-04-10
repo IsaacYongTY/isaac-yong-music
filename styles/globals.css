@@ -97,10 +97,10 @@
 /*    rgb(var(--background-start-rgb));*/
 /*}*/
 
-/*a {*/
-/*  color: inherit;*/
-/*  text-decoration: none;*/
-/*}*/
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 /*@media (prefers-color-scheme: dark) {*/
 /*  html {*/
@@ -112,10 +112,12 @@ html {
     /* 62.5% of 16px browser font size is 10px */
     font-size: 62.5%;
 }
+
 body {
     margin: 0;
     font-family: "Roboto", ui-monospace, Menlo, Monaco;
     /*    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',*/
     /*    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;*/
+    font-size: 1.6rem;
 }
 
