@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import IsaacYongSignature from "public/isaac-yong-signature.png";
-import styles from "./Header.module.scss";
+import styles from "./NavigationBar.module.scss";
 import { menu } from "@/src/common/constants";
 import { useRouter } from "next/router";
 const cx = classnames.bind(styles);
@@ -12,7 +12,7 @@ const cx = classnames.bind(styles);
 type HeaderProps = {
     isSticky?: boolean;
 };
-export default function Header({ isSticky }: HeaderProps): JSX.Element {
+export default function NavigationBar({ isSticky }: HeaderProps): JSX.Element {
     const router = useRouter();
     console.log(router.asPath);
     return (
@@ -28,6 +28,19 @@ export default function Header({ isSticky }: HeaderProps): JSX.Element {
                         <Link href={item.href} title={item.name}>
                             {item.name}
                         </Link>
+                        {item.submenu && (
+                            <div className={cx("dropdown-menu")}>
+                                {item.submenu.map((sub) => (
+                                    <Link
+                                        key={sub.href}
+                                        href={sub.href}
+                                        title={item.name}
+                                    >
+                                        {sub.name}
+                                    </Link>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>

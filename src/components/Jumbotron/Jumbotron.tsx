@@ -45,7 +45,7 @@ export default function Jumbotron(): JSX.Element {
 
                     <div className={cx("text-container")}>
                         <div className={cx("subtitle")}>
-                            SINGER-SONGWRITER. MUSICIAN.
+                            PERFORMER · SINGER-SONGWRITER · CREATOR
                         </div>
                     </div>
 

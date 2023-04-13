@@ -7,6 +7,20 @@ export const menu: MenuItem[] = [
     {
         href: "/about",
         name: "About",
+        submenu: [
+            {
+                href: "/events",
+                name: "Events",
+            },
+            {
+                href: "/gears",
+                name: "Gears",
+            },
+            {
+                href: "/partners",
+                name: "Partners",
+            },
+        ],
     },
     {
         href: "/music",
@@ -17,8 +31,8 @@ export const menu: MenuItem[] = [
         name: "Videos",
     },
     {
-        href: "/calendar",
-        name: "Calendar",
+        href: "/events",
+        name: "Events",
     },
     {
         href: "/music-sheets",
