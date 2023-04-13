@@ -98,8 +98,8 @@
 /*}*/
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 /*@media (prefers-color-scheme: dark) {*/
@@ -111,6 +111,11 @@ a {
 html {
     /* 62.5% of 16px browser font size is 10px */
     font-size: 62.5%;
+
+    // captcha hidden by default, will set visibility on the page that requires recaptcha
+    .grecaptcha-badge {
+        visibility: hidden;
+    }
 }
 
 body {
@@ -121,4 +126,3 @@ body {
     /*    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;*/
     font-size: 1.6rem;
 }
-

@@ -11,3 +11,4 @@ export default function handler(
 ) {
   res.status(200).json({ name: 'John Doe' })
 }
+// https://www.google.com/recaptcha/api/siteverify

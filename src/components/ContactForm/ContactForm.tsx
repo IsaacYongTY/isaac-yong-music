@@ -5,6 +5,7 @@ import { Button, TextField } from "@mui/material";
 import { enqueueSnackbar, SnackbarProvider } from "notistack";
 
 import styles from "./ContactForm.module.scss";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const cx = classnames.bind(styles);
 const ContactForm: React.FC = () => {
@@ -14,7 +15,9 @@ const ContactForm: React.FC = () => {
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
 
-    const handleSubmit = async () => {
+    const { executeRecaptcha } = useGoogleReCaptcha();
+
+    const submitForm = async () => {
         try {
             await axios.post("/api/contact", {
                 email,
@@ -23,6 +26,32 @@ const ContactForm: React.FC = () => {
                 subject,
                 message,
             });
+        } catch (err) {
+            throw err;
+        }
+    };
+
+    const verifyRecaptcha = async (token: string) => {
+        try {
+            await axios.post("/api/recaptcha/verify", {
+                token,
+            });
+        } catch (err) {
+            throw err;
+        }
+    };
+
+    const handleSubmit = async () => {
+        try {
+            if (!executeRecaptcha) {
+                console.log("Execute recaptcha not yet available");
+                return;
+            }
+
+            const token = await executeRecaptcha("submitContactForm");
+
+            await verifyRecaptcha(token);
+            await submitForm();
 
             enqueueSnackbar({
                 message: "Your message has been sent successfully!",
@@ -58,7 +87,7 @@ const ContactForm: React.FC = () => {
                         onChange={(e) => setFirstName(e.target.value)}
                         label="First Name"
                         variant="outlined"
-                        value={lastName}
+                        value={firstName}
                         fullWidth
                         required
                     />
@@ -88,6 +117,17 @@ const ContactForm: React.FC = () => {
                     value={message}
                     required
                 />
+                <div className={cx("recaptcha-disclaimer")}>
+                    This site is protected by reCAPTCHA and the Google{" "}
+                    <a href="https://policies.google.com/privacy">
+                        Privacy Policy
+                    </a>{" "}
+                    and{" "}
+                    <a href="https://policies.google.com/terms">
+                        Terms of Service
+                    </a>{" "}
+                    apply.
+                </div>
             </div>
 
             <div className={cx("button-container")}>
