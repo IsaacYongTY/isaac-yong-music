@@ -1,0 +1,36 @@
+@import "styles/Common.scss";
+
+.container {
+    background-color: $primary-dark;
+    color: white;
+    height: 100vh;
+
+    .content-container {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .error-header {
+            margin-top:  3.2rem;
+            font-size: 16rem;
+        }
+
+        .error-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+
+        }
+    }
+
+
+}
