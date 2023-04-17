@@ -7,6 +7,7 @@ import IsaacYongSignature from "public/isaac-yong-signature.png";
 import styles from "./NavigationBar.module.scss";
 import { menu } from "@/src/common/constants";
 import { useRouter } from "next/router";
+import DropdownMenu from "@/src/components/NavigationBar/DropdownMenu";
 const cx = classnames.bind(styles);
 
 type HeaderProps = {
@@ -28,19 +29,7 @@ export default function NavigationBar({ isSticky }: HeaderProps): JSX.Element {
                         <Link href={item.href} title={item.name}>
                             {item.name}
                         </Link>
-                        {item.submenu && (
-                            <div className={cx("dropdown-menu")}>
-                                {item.submenu.map((sub) => (
-                                    <Link
-                                        key={sub.href}
-                                        href={sub.href}
-                                        title={item.name}
-                                    >
-                                        {sub.name}
-                                    </Link>
-                                ))}
-                            </div>
-                        )}
+                        {item.submenu && <DropdownMenu items={item.submenu} />}
                     </div>
                 ))}
             </div>
@@ -63,19 +52,7 @@ export default function NavigationBar({ isSticky }: HeaderProps): JSX.Element {
                         <Link href={item.href} title={item.name}>
                             {item.name}
                         </Link>
-                        {item.submenu && (
-                            <div className={cx("dropdown-menu")}>
-                                {item.submenu.map((sub) => (
-                                    <Link
-                                        key={sub.href}
-                                        href={sub.href}
-                                        title={item.name}
-                                    >
-                                        {sub.name}
-                                    </Link>
-                                ))}
-                            </div>
-                        )}
+                        {item.submenu && <DropdownMenu items={item.submenu} />}
                     </div>
                 ))}
             </div>

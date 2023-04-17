@@ -1,4 +1,50 @@
+@import "styles/Common.scss";
+
 .container {
-    width: 100vw;
-    min-height: 80px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+    &:hover {
+        .dropdown-menu {
+            display: flex;
+        }
+    }
+
+    .dropdown-menu {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        height: min-content;
+        background-color: $primary-dark;
+        padding: 24px;
+        border-radius: 8px;
+        box-shadow: 3px 3px 20px #2d2d2d;
+        gap: 16px;
+        font-size: 1.2rem;
+        z-index: 1;
+    }
+
+
 }
+
+//&:hover {
+//    .dropdown-menu {
+//        display: flex;
+//        //flex-direction: column;
+//        //justify-content: center;
+//        //position: absolute;
+//        //top: 80px;
+//        //height: min-content;
+//        //background-color: $primary-dark;
+//        //padding: 24px;
+//        //border-radius: 8px;
+//        //box-shadow: 3px 3px 20px #2d2d2d;
+//        //gap: 16px;
+//        //font-size: 1.2rem;
+//        //z-index: 1;
+//    }
+//}

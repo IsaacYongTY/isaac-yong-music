@@ -1,8 +1,5 @@
-type MenuItem = {
-    href: string;
-    name: string;
-    submenu?: MenuItem[];
-};
+import { MenuItem } from "@/src/common/types";
+
 export const menu: MenuItem[] = [
     {
         href: "/about",
