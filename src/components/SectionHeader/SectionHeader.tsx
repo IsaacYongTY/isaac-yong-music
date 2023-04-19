@@ -7,9 +7,15 @@ const cx = classnames.bind(styles);
 
 type SectionHeaderProps = {
     title: string;
+    noBorder?: boolean;
 };
 export default function SectionHeader({
     title,
+    noBorder = false,
 }: SectionHeaderProps): JSX.Element {
-    return <div className={cx("container")}>{title}</div>;
+    return (
+        <div className={cx("container", { "no-border": noBorder })}>
+            {title}
+        </div>
+    );
 }

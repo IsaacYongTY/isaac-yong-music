@@ -1,0 +1,36 @@
+@import "styles/Common.scss";
+
+.container {
+    background-color: $primary-dark;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+
+    .content-container {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        .subtitle {
+            box-sizing: border-box;
+            width: 50%;
+            //padding: 0 18rem;
+            margin: 3.6rem 0;
+            text-align: center;
+        }
+        .cards-container {
+            display: flex;
+            gap: 4rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding:0 10.8rem;
+        }
+    }
+}

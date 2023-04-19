@@ -1,0 +1,14 @@
+.container {
+    width: 100%;
+
+    height: auto; // Reset height
+
+    padding-top: 56.25%; // Percentage ratio for 16:9
+    position: relative; // Set to relative
+
+    .react-player {
+        position: absolute; // Scaling will occur since parent is relative now
+        top: 0;
+        left: 0;
+    }
+}

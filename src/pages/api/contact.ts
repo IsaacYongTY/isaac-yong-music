@@ -40,8 +40,8 @@ export default async function handler(
         await apiInstance.sendTransacEmail({
             subject: subject,
             to: [{ email, name: `${firstName} ${lastName}` }],
-            cc: [{ email: "contact@isaacyong.com", name: "Isaac Yong" }],
-            sender: { email: "contact@isaacyong.com", name: "Isaac Yong" },
+            cc: [{ email: "MusicSheets@isaacyong.com", name: "Isaac Yong" }],
+            sender: { email: "MusicSheets@isaacyong.com", name: "Isaac Yong" },
             htmlContent:
                 `<p>Dear ${firstName},</p>` +
                 "<p>Thank you for your message! We will get back to you within 3 working days.</p>" +

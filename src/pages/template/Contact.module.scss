@@ -1,0 +1,35 @@
+@import "styles/Common.scss";
+
+.container {
+    background-color: $primary-dark;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //padding-bottom: 70px;
+    color: white;
+
+    .subtitle {
+        height: 10rem;
+        width: 60rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 2.4rem;
+        color: $gold;
+
+        @media only screen and (max-width: 768px) {
+            width: 90%;
+        }
+    }
+
+    .contact-form-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+

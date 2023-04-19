@@ -1,7 +1,7 @@
 @import "styles/Common.scss";
 
 .container {
-    background-color: #231e1e;
+    background-color: $darker;
     width: 100%;
     color: white;
     display: flex;
@@ -25,44 +25,6 @@
         letter-spacing: 2px;
         width: 40rem;
         height: 100%;
-
-        .link-container {
-            display: flex;
-            align-items: center;
-            height: 100%;
-            border-bottom: 3px solid #231e1e;
-            box-sizing: border-box;
-            position: relative;
-
-            &:hover {
-                border-bottom: 3px solid white;
-                font-weight: 700;
-            }
-
-            //.dropdown-menu {
-            //    &:hover {
-            //        display: block !important;
-            //    }
-            //}
-
-            > a {
-                line-height: 2rem;
-                // to set the width so the element does not move when it becomes bold
-                &::before {
-                    display: block;
-                    content: attr(title);
-                    font-weight: 700;
-                    height: 0;
-                    overflow: hidden;
-                    visibility: hidden;
-                }
-            }
-        }
-
-        .selected {
-            border-bottom: 3px solid white;
-            font-weight: 700;
-        }
     }
 }
 

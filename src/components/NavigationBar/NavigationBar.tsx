@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classnames from "classnames/bind";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,30 +7,25 @@ import IsaacYongSignature from "public/isaac-yong-signature.png";
 import styles from "./NavigationBar.module.scss";
 import { menu } from "@/src/common/constants";
 import { useRouter } from "next/router";
-import DropdownMenu from "@/src/components/NavigationBar/DropdownMenu";
+import DropdownMenu from "@/src/components/NavigationBar/LinkItem/DropdownMenu";
+import { Collapse, Fade } from "@mui/material";
+import { KeyboardArrowDown } from "@mui/icons-material";
+import LinkItem from "@/src/components/NavigationBar/LinkItem";
 const cx = classnames.bind(styles);
 
-type HeaderProps = {
+type NavigationBarProps = {
     isSticky?: boolean;
 };
-export default function NavigationBar({ isSticky }: HeaderProps): JSX.Element {
-    const router = useRouter();
-    console.log(router.asPath);
+export default function NavigationBar({
+    isSticky = false,
+}: NavigationBarProps): JSX.Element {
+
+
     return (
         <div className={cx("container", { sticky: isSticky })}>
             <div className={cx("links-container")}>
                 {menu.slice(0, Math.ceil(menu.length / 2)).map((item) => (
-                    <div
-                        key={item.href}
-                        className={cx("link-container", {
-                            selected: router.asPath === item.href,
-                        })}
-                    >
-                        <Link href={item.href} title={item.name}>
-                            {item.name}
-                        </Link>
-                        {item.submenu && <DropdownMenu items={item.submenu} />}
-                    </div>
+                    <LinkItem item={item} key={item.href} />
                 ))}
             </div>
 
@@ -41,19 +36,10 @@ export default function NavigationBar({ isSticky }: HeaderProps): JSX.Element {
                     alt="isaac-yong-signature"
                 />
             </Link>
+
             <div className={cx("links-container")}>
                 {menu.slice(Math.ceil(menu.length / 2)).map((item) => (
-                    <div
-                        key={item.href}
-                        className={cx("link-container", {
-                            selected: router.asPath === item.href,
-                        })}
-                    >
-                        <Link href={item.href} title={item.name}>
-                            {item.name}
-                        </Link>
-                        {item.submenu && <DropdownMenu items={item.submenu} />}
-                    </div>
+                    <LinkItem item={item} key={item.href} />
                 ))}
             </div>
         </div>

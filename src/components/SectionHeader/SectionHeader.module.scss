@@ -1,3 +1,5 @@
+@import 'styles/Common.scss';
+
 .container {
     border-top: 0.6rem solid white;
     border-bottom: 0.6rem solid white;
@@ -14,6 +16,10 @@
     @media only screen and (max-width: 480px) {
         font-size: 2.4rem;
         padding: 2rem 2rem;
-
     }
+}
+
+.no-border {
+    border-top: none;
+    border-bottom: none;
 }

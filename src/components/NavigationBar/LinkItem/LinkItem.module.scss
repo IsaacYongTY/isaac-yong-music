@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-bottom: 3px solid #231e1e;
+    box-sizing: border-box;
+    position: relative;
+
+
+
+    &:hover {
+        border-bottom: 3px solid white;
+        font-weight: 700;
+
+        svg {
+            font-weight: bold;
+        }
+    }
+
+    > a {
+        line-height: 2rem;
+        // to set the width so the element does not move when it becomes bold
+        &::before {
+            display: block;
+            content: attr(title);
+            font-weight: 700;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+    }
+}
+
+.selected {
+    border-bottom: 3px solid white;
+    font-weight: 700;
+}
