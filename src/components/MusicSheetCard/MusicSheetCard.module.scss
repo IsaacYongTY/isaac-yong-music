@@ -1,9 +1,20 @@
 @import "styles/Common.scss";
 
 .container {
+    flex: 1 0 21%;
+    display: flex;
+    justify-content: center;
+    width: 25rem;
+
     :global {
         .MuiPaper-root {
             border-radius: 0.8rem;
+        }
+
+        // to allow ellipsis when title is too long, default behaviour of MUI Card is text wrap
+        .MuiCardHeader-content {
+            flex: 1 1 auto;
+            width: 100%;
         }
     }
     .card {
@@ -17,26 +28,36 @@
             box-shadow: 0px 1px 2px 0px #525252, 1px 2px 4px 0px #525252,
                 2px 4px 8px 0px #525252, 2px 4px 16px 0px #525252;
         }
-    }
 
-    .card-content-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        .card-header {
+            :global {
 
-        .button-container {
-            display: flex;
-            justify-content: center;
-            //margin-bottom: 1.8rem;
+
+                .MuiCardHeader-root,
+                .MuiTypography-root {
+                    text-overflow: ellipsis !important;
+                }
+            }
         }
-        .view-on-container {
+        .card-content-container {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            font-weight: 500;
-            font-size: 1.2rem;
 
-            span {
-                margin-right: 1.2rem;
+            .button-container {
+                display: flex;
+                justify-content: center;
+            }
+
+            .view-on-container {
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                font-size: 1.2rem;
+
+                span {
+                    margin-right: 1.2rem;
+                }
             }
         }
     }

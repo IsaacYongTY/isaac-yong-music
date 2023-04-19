@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classnames from "classnames/bind";
 import axios from "axios";
+import Link from "next/link";
 
 import NavigationBar from "@/src/components/NavigationBar";
 import Footer from "@/src/components/Footer";
@@ -44,13 +45,19 @@ export default function MusicSheets(): JSX.Element {
 
             <div className={cx("content-container")}>
                 <div className={cx("subtitle")}>
-                    Unfortunately, I cannot offer the music sheets for free due
-                    to copyright restrictions. However, they are available for
-                    purchase on MyMusicSheet, and a portion of the sales will be
-                    distributed to the publishers, artists, and songwriters. By
-                    supporting them, we can make a difference in the music
-                    industry and help sustain the careers of talented musicians.
-                    Let&apos;s play our part together!
+                    I am unable to provide the music sheets for free due to
+                    copyright restrictions, but you can purchase them on{" "}
+                    <Link
+                        href="https://www.mymusicsheet.com/isaacyongmusic"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        MyMusicSheet
+                    </Link>
+                    . A percentage of the proceeds will go to the publishers,
+                    artists, and songwriters, supporting talented musicians and
+                    sustaining their careers. Let us play a part together in
+                    supporting the musicians!
                 </div>
 
                 <div className={cx("cards-container")}>

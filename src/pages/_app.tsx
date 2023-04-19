@@ -13,7 +13,7 @@ const CustomFontTheme = createTheme({
         // },
         mode: "dark",
         primary: {
-            main: "#9F7969",
+            main: "#b28374",
         },
         // secondary: {
         //     main: "#9F7969",

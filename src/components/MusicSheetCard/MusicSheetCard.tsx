@@ -30,9 +30,14 @@ export default function MusicSheetCard({
 }: MusicSheetCardProps): JSX.Element {
     return (
         <div className={cx("container")}>
-            <Card sx={{ maxWidth: "250px" }} className={cx('card')}>
+            <Card sx={{ width: "250px" }} className={cx('card')}>
                 <CardHeader
                     title={`${musicSheet.title} - ${musicSheet.artist}`}
+                    className={cx('card-header')}
+                    // sx={{height: "20px"}}
+                    titleTypographyProps={{
+                        noWrap: true
+                    }}
                 />
 
                 <CardMedia
