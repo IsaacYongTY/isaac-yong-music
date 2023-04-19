@@ -6,7 +6,7 @@ import NavigationBar from "@/src/components/NavigationBar";
 import Footer from "@/src/components/Footer";
 
 import { enqueueSnackbar, SnackbarProvider } from "notistack";
-import { MusicSheet } from "@/src/pages/api/notion/music-sheet";
+import { MusicSheet } from "@/src/components/api/notion/types";
 import MusicSheetCard from "@/src/components/MusicSheetCard";
 
 import styles from "./MusicSheets.module.scss";
