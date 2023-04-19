@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    a {
+        color: white;
+    }
+
+    svg {
+        font-size: 3.6rem;
+    }
+
+    // No svg icon available, this align the icon with the rest
+    .spotify-logo {
+        margin-left: 0.3rem;
+        padding-bottom: 0.2rem;
+    }
+}

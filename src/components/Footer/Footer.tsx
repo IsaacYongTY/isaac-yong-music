@@ -2,7 +2,8 @@ import React, { useMemo } from "react";
 import classnames from "classnames/bind";
 
 import styles from "./Footer.module.scss";
-import SocialMedia from "@/src/components/SocialMedia";
+
+import SocialMedia from "./SocialMedia";
 
 const cx = classnames.bind(styles);
 export default function Footer(): JSX.Element {
@@ -11,8 +12,7 @@ export default function Footer(): JSX.Element {
     return (
         <div className={cx("container")}>
             <div>
-                {" "}
-                Links <SocialMedia />{" "}
+                <SocialMedia />
             </div>
             <div className={cx("copyright-container")}>
                 <p>Created by Long Tails Co.</p>

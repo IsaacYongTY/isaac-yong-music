@@ -12,11 +12,27 @@
     align-items: center;
     justify-content: space-between;
 
+    :global {
+        .MuiModal-root {
+            //display: flex;
+            //justify-content: center;
+            //align-items: center;
+
+            top: 50%;
+        }
+    }
+
+    .modal {
+        .container {
+            background-color: yellow;
+            padding: 1.2rem;
+            display: flex;
+        }
+    }
     .copyright-container {
         text-align: center;
         font-size: 1.2rem;
         .copyright {
-
             width: 100%;
         }
     }

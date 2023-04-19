@@ -10,12 +10,6 @@
         .MuiPaper-root {
             border-radius: 0.8rem;
         }
-
-        // to allow ellipsis when title is too long, default behaviour of MUI Card is text wrap
-        .MuiCardHeader-content {
-            flex: 1 1 auto;
-            width: 100%;
-        }
     }
     .card {
         &:hover {
@@ -31,11 +25,15 @@
 
         .card-header {
             :global {
+                // to allow ellipsis when title is too long, default behaviour of MUI Card is text wrap
+                .MuiCardHeader-content {
+                    flex: 1 1 auto;
+                    width: 100%;
 
-
-                .MuiCardHeader-root,
-                .MuiTypography-root {
-                    text-overflow: ellipsis !important;
+                    .MuiTypography-root {
+                        font-size: 1.6rem !important;
+                        letter-spacing: 0.1rem;
+                    }
                 }
             }
         }
