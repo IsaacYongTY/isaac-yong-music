@@ -11,7 +11,7 @@ import {
     Link,
 } from "@mui/material";
 import SocialMedia from "@/src/components/SocialMedia";
-import { MusicSheet } from "@/src/pages/api/notion/types";
+import { MusicSheet } from "@/src/components/api/notion/types";
 import ViewOn from "@/src/components/MusicSheetCard/ViewOn";
 import {
     AddShoppingCart,

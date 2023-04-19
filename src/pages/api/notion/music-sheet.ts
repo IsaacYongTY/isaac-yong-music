@@ -5,7 +5,7 @@ import {
     PageObjectResponse,
     PartialPageObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
-import { MusicSheet } from "@/src/pages/api/notion/types";
+import { MusicSheet } from "@/src/components/api/notion/types";
 
 import { derivePageObjectResponseToMusicSheet } from "@/src/components/api/notion/utils";
 import { getMusicSheets } from "@/src/components/api/notion/domain";
