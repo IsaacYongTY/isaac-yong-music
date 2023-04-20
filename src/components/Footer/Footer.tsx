@@ -3,7 +3,7 @@ import classnames from "classnames/bind";
 
 import styles from "./Footer.module.scss";
 
-import SocialMedia from "./SocialMedia";
+import SocialMedia from "@/src/components/SocialMedia";
 
 const cx = classnames.bind(styles);
 export default function Footer(): JSX.Element {

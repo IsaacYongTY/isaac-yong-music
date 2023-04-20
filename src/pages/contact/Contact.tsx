@@ -25,7 +25,9 @@ export default function Contact(): JSX.Element {
                     </div>
                 </div>
                 {/*<SectionHeader title="Contact" />*/}
-                <ContactForm />
+                <div className={cx("contact-form-container")}>
+                    <ContactForm />
+                </div>
             </div>
             <Footer />
         </div>

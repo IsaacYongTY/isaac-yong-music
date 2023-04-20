@@ -2,19 +2,17 @@
 
 .container {
     background-color: $primary-dark;
-    //width: 100vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 70px;
     color: white;
 
     .content-container {
         flex-grow: 1;
+
         .subtitle {
             height: 10rem;
-            width: 60rem;
             display: flex;
             flex-direction: column;
             gap: 0.8rem;
@@ -27,6 +25,15 @@
             @media only screen and (max-width: 768px) {
                 width: 90%;
             }
+        }
+
+        .contact-form-container {
+            border-radius: 2.4rem;
+            margin-bottom: 4.8rem;
+            box-sizing: border-box;
+            background-color: $primary-dark;
+            // neumorphism explore
+            box-shadow: $box-shadow-primary-dark;
         }
     }
 }
