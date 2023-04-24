@@ -66,6 +66,11 @@
         width: 100%;
         padding: 1.2rem;
         box-sizing: border-box;
+
+        .close-icon {
+            padding: 1.2rem;
+            cursor: pointer;
+        }
     }
 
     .drawer-menu-item-container {

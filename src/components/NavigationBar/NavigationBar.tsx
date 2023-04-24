@@ -5,18 +5,17 @@ import React, { useEffect, useState } from "react";
 import classnames from "classnames/bind";
 import Link from "next/link";
 import Image from "next/image";
+import { Drawer } from "@mui/material";
 
 import IsaacYongSignature from "public/isaac-yong-signature.png";
-import styles from "./NavigationBar.module.scss";
-import MenuIcon from "@mui/icons-material/Menu";
+// import MenuIcon from "@mui/icons-material/Menu";
 import { menu } from "@/src/common/constants";
 import LinkItem from "@/src/components/NavigationBar/LinkItem";
-import { Drawer } from "@mui/material";
-import { KeyboardArrowDown } from "@mui/icons-material";
 import SocialMedia from "@/src/components/SocialMedia";
-import { Close } from "@mui/icons-material";
 import DrawerLinkItem from "@/src/components/DrawerLinkItem";
+import { Close, Menu } from "@mui/icons-material";
 
+import styles from "./NavigationBar.module.scss";
 const cx = classnames.bind(styles);
 
 type NavigationBarProps = {
@@ -50,7 +49,7 @@ export default function NavigationBar({
             </div>
 
             <div className={cx("drawer-container")}>
-                <MenuIcon
+                <Menu
                     onClick={() => setShowDrawer(true)}
                     className={cx("menu-icon")}
                 />
@@ -61,7 +60,10 @@ export default function NavigationBar({
                     className={cx("drawer")}
                 >
                     <div className={cx("drawer-header")}>
-                        <Close onClick={() => setShowDrawer(false)} />
+                        <Close
+                            onClick={() => setShowDrawer(false)}
+                            className={cx("close-icon")}
+                        />
                     </div>
                     <div className={cx("drawer-menu-item-container")}>
                         {menu.map((item, index) => (
