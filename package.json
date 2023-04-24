@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.11.16",
+    "@next/font": "^13.3.1",
     "@notionhq/client": "^2.2.4",
     "@sendinblue/client": "^3.1.0",
     "@types/node": "18.11.18",
