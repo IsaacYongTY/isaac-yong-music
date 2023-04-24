@@ -59,12 +59,6 @@ export default function NavigationBar({
                     anchor="right"
                     onClose={() => setShowDrawer(false)}
                     className={cx("drawer")}
-                    sx={{
-                        "& .drawer-menu-item": {
-                            width: "80rem",
-                            backgroundColor: "yellow",
-                        },
-                    }}
                 >
                     <div className={cx("drawer-header")}>
                         <Close onClick={() => setShowDrawer(false)} />
