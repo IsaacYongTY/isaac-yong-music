@@ -39,11 +39,12 @@ export default function DrawerLinkItem({
             {item.submenu && (
                 <Collapse in={showSubmenu}>
                     <div className={cx("submenu-container")}>
-                        {item.submenu.map((submenuItem) => (
-                            <div>
-                                {" "}
-                                - {submenuItem.name}
-                                <Link href={submenuItem.href}></Link>
+                        {item.submenu.map((submenuItem, index) => (
+                            <div key={index}>
+                                <Link href={submenuItem.href}>
+                                    {" "}
+                                    - {submenuItem.name}
+                                </Link>
                             </div>
                         ))}
                     </div>
