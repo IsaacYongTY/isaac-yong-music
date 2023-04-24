@@ -7,7 +7,7 @@ import { MenuItem } from "@/src/common/types";
 import DropdownMenu from "@/src/components/NavigationBar/LinkItem/DropdownMenu";
 
 import styles from "./LinkItem.module.scss";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 const cx = classnames.bind(styles);
 
@@ -15,12 +15,12 @@ type LinkItemProps = {
     item: MenuItem;
 };
 export default function LinkItem({ item }: LinkItemProps): JSX.Element {
-    const router = useRouter();
+    const pathname = usePathname();
 
     return (
         <div
             className={cx("container", {
-                selected: item.href === router.asPath,
+                selected: item.href === pathname,
             })}
         >
             <Link href={item.href} title={item.name} className={cx("link")}>

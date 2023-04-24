@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import { Inter } from "@next/font/google";
@@ -9,16 +11,16 @@ import ComingSoon from "@/src/pages/coming-soon";
 import NavigationBar from "@/src/components/NavigationBar";
 import Jumbotron from "@/src/components/Jumbotron";
 import SectionHeader from "@/src/components/SectionHeader";
+import AdamChanGuitars from "public/adam-chan-logo.png";
+import LittleBandPlusLogo from "public/little-band-plus-logo.jpg";
+import RockestraIsaacElectricGuitar from "public/rockestra-isaac-electric-guitar.jpeg";
+import YamahaLogo from "public/yamaha-logo.png";
+
+import { ENABLE_COMING_SOON_REDIRECT } from "flags";
+
+import styles from "@/styles/Home.module.scss";
 import Footer from "@/src/components/Footer";
 import VideoPlayer from "@/src/components/VideoPlayer";
-import AdamChanGuitars from "@/public/adam-chan-logo.png";
-import LittleBandPlusLogo from "@/public/little-band-plus-logo.jpg";
-import RockestraIsaacElectricGuitar from "@/public/rockestra-isaac-electric-guitar.jpeg";
-
-import YamahaLogo from "@/public/yamaha-logo.png";
-
-import { ENABLE_COMING_SOON_REDIRECT } from "@/flags";
-import styles from "@/styles/Home.module.scss";
 
 const cx = classnames.bind(styles);
 

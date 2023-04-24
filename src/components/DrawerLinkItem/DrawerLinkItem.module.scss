@@ -1,0 +1,23 @@
+.container {
+    width: 300px;
+    min-height: 50px;
+    padding: 0 4rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    flex-direction: column;
+
+    .menu-item-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .submenu-container {
+        margin: 1.2rem 0 2.4rem 0;
+        font-size: 1.4rem;
+
+        div {
+            margin-bottom: 1rem;
+        }
+    }
+}

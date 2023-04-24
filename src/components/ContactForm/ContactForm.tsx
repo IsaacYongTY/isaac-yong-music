@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import classnames from "classnames/bind";
 import axios from "axios";

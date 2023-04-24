@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
+
 import classnames from "classnames/bind";
 import Link from "next/link";
 import Image from "next/image";
 
 import IsaacYongSignature from "public/isaac-yong-signature.png";
 import styles from "./NavigationBar.module.scss";
+import MenuIcon from "@mui/icons-material/Menu";
 import { menu } from "@/src/common/constants";
-import { useRouter } from "next/router";
-import DropdownMenu from "@/src/components/NavigationBar/LinkItem/DropdownMenu";
-import { Collapse, Fade } from "@mui/material";
-import { KeyboardArrowDown } from "@mui/icons-material";
 import LinkItem from "@/src/components/NavigationBar/LinkItem";
+import { Drawer } from "@mui/material";
+import { KeyboardArrowDown } from "@mui/icons-material";
+import SocialMedia from "@/src/components/SocialMedia";
+import { Close } from "@mui/icons-material";
+import DrawerLinkItem from "@/src/components/DrawerLinkItem";
+
 const cx = classnames.bind(styles);
 
 type NavigationBarProps = {
@@ -19,7 +25,7 @@ type NavigationBarProps = {
 export default function NavigationBar({
     isSticky = false,
 }: NavigationBarProps): JSX.Element {
-
+    const [showDrawer, setShowDrawer] = useState(false);
 
     return (
         <div className={cx("container", { sticky: isSticky })}>
@@ -41,6 +47,38 @@ export default function NavigationBar({
                 {menu.slice(Math.ceil(menu.length / 2)).map((item) => (
                     <LinkItem item={item} key={item.href} />
                 ))}
+            </div>
+
+            <div className={cx("drawer-container")}>
+                <MenuIcon
+                    onClick={() => setShowDrawer(true)}
+                    className={cx("menu-icon")}
+                />
+                <Drawer
+                    open={showDrawer}
+                    anchor="right"
+                    onClose={() => setShowDrawer(false)}
+                    className={cx("drawer")}
+                    sx={{
+                        "& .drawer-menu-item": {
+                            width: "80rem",
+                            backgroundColor: "yellow",
+                        },
+                    }}
+                >
+                    <div className={cx("drawer-header")}>
+                        <Close onClick={() => setShowDrawer(false)} />
+                    </div>
+                    <div className={cx("drawer-menu-item-container")}>
+                        {menu.map((item, index) => (
+                            <DrawerLinkItem item={item} key={index} />
+                        ))}
+                    </div>
+
+                    <div className={cx("social-media-container")}>
+                        <SocialMedia />
+                    </div>
+                </Drawer>
             </div>
         </div>
     );

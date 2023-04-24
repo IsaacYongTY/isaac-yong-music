@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import classnames from "classnames/bind";
 import Image from "next/image";
@@ -10,8 +12,6 @@ import BilibiliWhiteLogo from "@/public/bilibili-white-icon.png";
 import ContactForm from "@/src/components/ContactForm";
 
 import styles from "./SocialMedia.module.scss";
-import { Modal } from "antd";
-import { CloseIcon } from "next/dist/client/components/react-dev-overlay/internal/icons/CloseIcon";
 
 const cx = classnames.bind(styles);
 export default function SocialMedia(): JSX.Element {
