@@ -6,8 +6,8 @@ export const menu: MenuItem[] = [
         name: "About",
         submenu: [
             {
-                href: "/events",
-                name: "Events",
+                href: "/portfolio",
+                name: "Portfolio",
             },
             {
                 href: "/gears",

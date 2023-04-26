@@ -1,0 +1,33 @@
+.container {
+    user-select: none;
+
+    :global {
+        .MuiDrawer-paper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .header {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 1.2rem;
+        box-sizing: border-box;
+
+        .close-icon {
+            padding: 1.2rem;
+            cursor: pointer;
+        }
+    }
+
+    .link-items-container {
+        flex-grow: 1;
+        cursor: pointer;
+    }
+
+    .social-media-container {
+        margin-bottom: 2.4rem;
+    }
+}

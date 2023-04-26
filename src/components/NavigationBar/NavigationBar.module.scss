@@ -11,7 +11,7 @@
     box-sizing: border-box;
     height: 124px;
     z-index: 2; // to be on top of MUI TextField text
-
+    user-select: none;
     .links-container {
         @media only screen and (max-width: 768px) {
             display: none;
@@ -47,39 +47,5 @@
     .menu-icon {
         font-size: 3rem;
         cursor: pointer;
-    }
-}
-.drawer {
-    user-select: none;
-
-    :global {
-        .MuiDrawer-paper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-
-    .drawer-header {
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        padding: 1.2rem;
-        box-sizing: border-box;
-
-        .close-icon {
-            padding: 1.2rem;
-            cursor: pointer;
-        }
-    }
-
-    .drawer-menu-item-container {
-        //margin-bottom: 3.2rem;
-        flex-grow: 1;
-        cursor: pointer;
-    }
-
-    .social-media-container {
-        margin-bottom: 2.4rem;
     }
 }
