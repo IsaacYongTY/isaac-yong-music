@@ -36,7 +36,7 @@ export const menu: MenuItem[] = [
         name: "Music Sheets",
     },
     {
-        href: "/services",
+        href: "/events",
         name: "Services",
         submenu: [
             {

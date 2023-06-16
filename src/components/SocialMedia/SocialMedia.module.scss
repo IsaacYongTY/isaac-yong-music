@@ -21,3 +21,15 @@
         margin-left: 0.4rem;
     }
 }
+
+.grey {
+    svg {
+        color: #2b2b2b;
+    }
+
+    // https://angel-rs.github.io/css-color-filter-generator/
+    img {
+        filter: brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(5%)
+            hue-rotate(20deg) brightness(93%) contrast(84%);
+    }
+}

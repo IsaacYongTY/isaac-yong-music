@@ -1,18 +1,17 @@
+@import "styles/Common";
+
 .container {
     display: flex;
     align-items: center;
     height: 100%;
-    border-bottom: 3px solid #231e1e;
+    border-bottom: 3px solid white;
     box-sizing: border-box;
     position: relative;
 
-
-
-
     &:hover {
-        border-bottom: 3px solid white;
+        border-bottom: 3px solid $brand-color;
         font-weight: 700;
-
+        color: $brand-color;
         svg {
             font-weight: bold;
         }
@@ -33,6 +32,7 @@
 }
 
 .selected {
-    border-bottom: 3px solid white;
+    color: $brand-color;
+    border-bottom: 3px solid $brand-color;;
     font-weight: 700;
 }

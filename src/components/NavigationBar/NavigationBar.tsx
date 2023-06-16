@@ -36,6 +36,7 @@ export default function NavigationBar({
                     src={IsaacYongSignature}
                     width={200}
                     alt="isaac-yong-signature"
+                    className={cx('signature')}
                 />
             </Link>
 

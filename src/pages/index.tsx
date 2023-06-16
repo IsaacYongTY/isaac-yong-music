@@ -14,11 +14,18 @@ import VideoPlayer from "@/src/components/VideoPlayer";
 import AdamChanGuitars from "@/public/adam-chan-logo.png";
 import LittleBandPlusLogo from "@/public/little-band-plus-logo.jpg";
 import RockestraIsaacElectricGuitar from "@/public/rockestra-isaac-electric-guitar.jpeg";
-
+import IsaacIntroPhoto from "@/public/homepage/isaac-intro-photo.png";
 import YamahaLogo from "@/public/yamaha-logo.png";
 
 import { ENABLE_COMING_SOON_REDIRECT } from "@/flags";
 import styles from "@/styles/Home.module.scss";
+import PartnersSection from "@/src/components/pages/home/PartnersSection";
+import IntroSection from "@/src/components/pages/home/IntroSection";
+import ListenSection from "@/src/components/pages/home/ListenSection";
+import ServicesSection from "@/src/components/pages/home/ServicesSection";
+import LatestVideoSection from "@/src/components/pages/home/LatestVideoSection";
+import ArrangementSection from "@/src/components/pages/home/ArrangementSection";
+import UpcomingEventsSection from "@/src/components/pages/home/UpcomingEventsSection";
 
 const cx = classnames.bind(styles);
 
@@ -60,75 +67,18 @@ export default function Home() {
                 />
             </Head>
             <main className={cx("main")}>
+                <NavigationBar />
+
                 <Jumbotron />
 
-                {showNavigationBar ? (
-                    <NavigationBar isSticky={true} />
-                ) : (
-                    <div className={cx("header-placeholder")} />
-                )}
+                <IntroSection />
+                <PartnersSection />
+                <ServicesSection />
+                <UpcomingEventsSection />
+                <LatestVideoSection />
+                <ListenSection />
+                <ArrangementSection />
 
-                <div className={cx("intro-container")}>
-                    <SectionHeader title="Hello!" noBorder />
-                    <div className={cx("content-container")}>
-                        <div>
-                            <Image
-                                src={RockestraIsaacElectricGuitar}
-                                alt={"rockestra-isaac-electric-guitar"}
-                                width={400}
-                                // height={500}
-                            />
-                        </div>
-                        <div>
-                            Hi! Hello! I make a living as a musician by
-                            performing live music. In addition to my live
-                            performances, my work also includes music
-                            production, songwriting, content creation, and
-                            education. I take pleasure in creating a fantastic
-                            ambiance and atmosphere through my music and
-                            performances. My skills involve playing the guitar
-                            and singing.
-                        </div>
-                    </div>
-                </div>
-
-                <SectionHeader title="Performance Schedule" />
-                <SectionHeader title="Events" />
-
-                <div className={cx("video-section-container")}>
-                    <SectionHeader title="Latest Release" />
-
-                    <VideoPlayer url="https://www.youtube.com/playlist?list=PL020eiw54Omc-1TCgbD2BpcxMhIp9W-jn" />
-                </div>
-
-                <SectionHeader title="Recent Events" />
-
-                <div className={cx("video-section-container")}>
-                    <SectionHeader title="Original Songs" />
-
-                    <VideoPlayer url="https://www.youtube.com/watch?v=e3iiac7d0m8" />
-                </div>
-
-                <SectionHeader title="Partners" />
-                <div className={cx("partners-container")}>
-                    <div className={cx("logo-container")}>
-                        <Image
-                            src={AdamChanGuitars}
-                            width={150}
-                            alt="adam-chan-guitars"
-                        />
-                        <Image
-                            src={LittleBandPlusLogo}
-                            width={150}
-                            alt="little-band-plus"
-                        />
-                        <Image src={YamahaLogo} height={50} alt="yamaha-logo" />
-                    </div>
-
-                    <div className={cx("button-container")}>
-                        <Button variant="contained">Learn More</Button>
-                    </div>
-                </div>
                 <Footer />
             </main>
         </>

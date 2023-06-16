@@ -1,0 +1,53 @@
+@import "../../../../../styles/Common";
+
+.container {
+    width: 100%;
+    background-color: $dark;
+    padding-bottom: 4.8rem;
+
+    .header {
+        color: white;
+    }
+
+    .content-container {
+        display: flex;
+        justify-content: center;
+        color: white;
+        gap: 0 16rem;
+        flex-wrap: wrap;
+        .selector-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .song-list {
+                display: flex;
+                flex-direction: column;
+                margin: 0 2.4rem;
+                align-items: center;
+            }
+        }
+
+        .button {
+            width: 20rem;
+            height: 4rem;
+            border-radius: 2rem;
+            box-shadow: none;
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 1px 1px 10px 2px #656565;
+            }
+        }
+
+        .selected {
+            border: 2px solid #1dd860;
+            background-color: #1dd860;
+            color: $dark;
+        }
+    }
+}

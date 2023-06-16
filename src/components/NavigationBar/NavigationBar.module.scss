@@ -1,17 +1,21 @@
 @import "styles/Common.scss";
 
 .container {
-    background-color: $darker;
+    //background-color: $darker;
+    background-color: white;
     width: 100%;
-    color: white;
+    color: #2f2f2f;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 4rem;
     box-sizing: border-box;
-    height: 124px;
+    height: 88px;
     z-index: 2; // to be on top of MUI TextField text
     user-select: none;
+    //border-bottom: 1px solid gray;
+    box-shadow: 0 1px 5px 1px #cecece;
+
     .links-container {
         @media only screen and (max-width: 768px) {
             display: none;
@@ -25,6 +29,10 @@
         letter-spacing: 2px;
         width: 40rem;
         height: 100%;
+    }
+
+    .signature {
+        filter: invert(1);
     }
 }
 

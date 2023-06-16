@@ -8,6 +8,7 @@ import InMusicIsaacWithGuitar from "@/public/inmusic-isaac-with-guitar.jpg";
 import SocialMedia from "@/src/components/SocialMedia/SocialMedia";
 
 import styles from "./Jumbotron.module.scss";
+import { Button } from "@mui/material";
 
 const cx = classnames.bind(styles);
 export default function Jumbotron(): JSX.Element {
@@ -39,17 +40,29 @@ export default function Jumbotron(): JSX.Element {
                 <div className={cx("content")}>
                     <Image
                         src={IsaacYongSignature}
-                        width={700}
+                        width={500}
                         alt="isaac-yong-signature"
+                        className={cx("logo")}
                     />
 
                     <div className={cx("text-container")}>
+                        {/*<div className={cx("subtitle")}>*/}
+                        {/*    PERFORMER · SINGER-SONGWRITER · CREATOR*/}
+                        {/*</div>*/}
                         <div className={cx("subtitle")}>
-                            PERFORMER · SINGER-SONGWRITER · CREATOR
+                            Experience a world of musical bliss: Unleashing the
+                            captivating fusion of gentle vocals, multilayered
+                            fingerstyle guitar, and harmonious rhythms
                         </div>
                     </div>
 
-                    <SocialMedia />
+                    <div className={cx("button-container")}>
+                        <Button variant="contained" size="large">
+                            GET IN TOUCH
+                        </Button>
+                    </div>
+
+                    <SocialMedia color="grey" />
                 </div>
             </div>
         </>

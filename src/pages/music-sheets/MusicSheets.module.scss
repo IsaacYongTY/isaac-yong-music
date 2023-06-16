@@ -1,14 +1,12 @@
 @import "styles/Common.scss";
 
 .container {
-    background-color: $primary-dark;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    //color: white;
-    //color: $gold;
-    color: #c5a57d;
+    //color: #c5a57d;
+    color: $dark;
 
     //GPT recommendation, for reference temporarily
     //      Pale gold (#e6be8a) - Contrast ratio: 4.58:1

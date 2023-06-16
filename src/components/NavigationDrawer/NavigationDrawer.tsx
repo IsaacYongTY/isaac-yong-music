@@ -35,7 +35,7 @@ export default function NavigationDrawer({
             </div>
 
             <div className={cx("social-media-container")}>
-                <SocialMedia />
+                <SocialMedia color="grey" />
             </div>
         </Drawer>
     );

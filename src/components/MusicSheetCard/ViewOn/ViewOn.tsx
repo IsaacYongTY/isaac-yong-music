@@ -28,21 +28,6 @@ export default function ViewOn({ youTubeUrl, spotifyUrl, bilibiliUrl }: ViewOnPr
                     <YouTube />
                 </Link>
             )}
-            {/*<Link*/}
-            {/*    href="https://instagram.com/isaacyongmusic"*/}
-            {/*    target="_blank"*/}
-            {/*    rel="noopener noreferrer"*/}
-            {/*>*/}
-            {/*    <Instagram />*/}
-            {/*</Link>*/}
-
-            {/*<Link*/}
-            {/*    href="https://facebook.com/isaacyongmusic"*/}
-            {/*    target="_blank"*/}
-            {/*    rel="noopener noreferrer"*/}
-            {/*>*/}
-            {/*    <Facebook />*/}
-            {/*</Link>*/}
 
             {spotifyUrl && (
                 <Link

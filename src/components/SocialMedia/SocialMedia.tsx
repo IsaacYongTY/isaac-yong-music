@@ -14,7 +14,11 @@ import ContactForm from "@/src/components/ContactForm";
 import styles from "./SocialMedia.module.scss";
 
 const cx = classnames.bind(styles);
-export default function SocialMedia(): JSX.Element {
+
+type SocialMediaProps = {
+    color?: "grey" | "white";
+};
+export default function SocialMedia({ color }: SocialMediaProps): JSX.Element {
     const [showContactForm, setShowContactForm] = useState(false);
 
     const handleContactFormOnClose = (_: object, reason: string) => {
@@ -27,7 +31,7 @@ export default function SocialMedia(): JSX.Element {
     };
     return (
         <>
-            <div className={cx("container")}>
+            <div className={cx("container", color)}>
                 <Link
                     href="https://instagram.com/isaacyongmusic"
                     target="_blank"

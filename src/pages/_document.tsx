@@ -8,6 +8,10 @@ export default function Document() {
             <body>
                 <Main />
                 <NextScript />
+                <script
+                    src="https://open.spotify.com/embed-podcast/iframe-api/v1"
+                    async
+                ></script>
             </body>
         </Html>
     );
