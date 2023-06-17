@@ -24,7 +24,7 @@ export default function IntroSection(): JSX.Element {
                     <div>
                         <h1>HEY THERE! 👋</h1>
                         <p>
-                            I'm Isaac, a singer-songwriter, performer, and
+                            I&apos;m Isaac, a singer-songwriter, performer, and
                             content creator. My adventure into the world of
                             music kicked off pretty casually - plunking out TV
                             theme songs on the piano. Before long, I found
@@ -41,16 +41,16 @@ export default function IntroSection(): JSX.Element {
                             creating memories.
                         </p>
                         <p>
-                            When I'm not out there performing, you can usually
+                            When I&apos;m not out there performing, you can usually
                             find me huddled in my studio, jamming and recording
                             both original tracks and covers.
                         </p>
                         <p>
                             I love talking about music just as much as I love
-                            making it. Sharing knowledge and seeing someone's
+                            making it. Sharing knowledge and seeing someone&apos;s
                             eyes light up when they strum their first chord is
                             like magic to me. Whether it’s through workshops,
-                            online tutorials or just a friendly chat, I'm all
+                            online tutorials or just a friendly chat, I&apos;m all
                             about helping others catch the music bug. 🎶
                         </p>
                         <Button variant="outlined" size="large">

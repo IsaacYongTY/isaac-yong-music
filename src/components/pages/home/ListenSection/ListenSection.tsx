@@ -31,6 +31,7 @@ export default function ListenSection(): JSX.Element {
                                     selected: spotifyLink === song.link,
                                 })}
                                 onClick={() => setSpotifyLink(song.link)}
+                                key={song.link}
                             >
                                 {song.title}
                             </button>
@@ -45,6 +46,7 @@ export default function ListenSection(): JSX.Element {
                                     selected: spotifyLink === song.link,
                                 })}
                                 onClick={() => setSpotifyLink(song.link)}
+                                key={song.link}
                             >
                                 {song.title}
                             </button>
