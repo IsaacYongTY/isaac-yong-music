@@ -25,7 +25,7 @@ export default function NavigationBar({
 
     const filteredMenu = useMemo(
         () => menu.filter((item) => item.isActive),
-        [menu]
+        []
     );
 
     return (

@@ -13,7 +13,7 @@ import styles from "./MusicSheets.module.scss";
 const cx = classnames.bind(styles);
 
 export default async function MusicSheets() {
-    const musicSheets = await getMusicSheets<MusicSheet[]>();
+    const musicSheets = await getMusicSheets();
 
     return (
         <div className={cx("container")}>

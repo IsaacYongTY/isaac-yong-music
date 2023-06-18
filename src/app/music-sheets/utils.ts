@@ -9,7 +9,7 @@ export const getMusicSheets = async () => {
         auth: process.env.NEXT_PUBLIC_NOTION_SECRET_KEY,
     });
 
-    const databaseId = process.env.NEXT_PUBLIC_NOTION_DATABASE_ID;
+    const databaseId = process.env.NEXT_PUBLIC_NOTION_DATABASE_ID || '';
 
     try {
         const { results } = await notion.databases.query({
