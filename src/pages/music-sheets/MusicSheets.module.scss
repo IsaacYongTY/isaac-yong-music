@@ -5,13 +5,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    //color: #c5a57d;
     color: $dark;
 
-    //GPT recommendation, for reference temporarily
-    //      Pale gold (#e6be8a) - Contrast ratio: 4.58:1
-    //      Light pinkish-orange (#ffc2b4) - Contrast ratio: 4.51:1
-    //      Dusty rose gold (#c5a57d) - Contrast ratio: 4.54:1
     .content-container {
         display: flex;
         flex-direction: column;
@@ -34,7 +29,7 @@
             a {
                 text-decoration: underline;
             }
-            @media only screen and (max-width: 480px) {
+            @media only screen and (max-width: 768px) {
                 width: 100%;
                 padding: 0 2.4rem;
             }
@@ -45,8 +40,9 @@
             flex-wrap: wrap;
             gap: 4rem 2rem;
             margin-bottom: 4rem;
+            padding: 0 16rem;
 
-            @media only screen and (max-width: 480px) {
+            @media only screen and (max-width: 768px) {
                 width: 100%;
                 padding: 0;
             }

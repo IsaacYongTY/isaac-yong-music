@@ -10,15 +10,9 @@ import {
     CardMedia,
     Link,
 } from "@mui/material";
-import SocialMedia from "@/src/components/SocialMedia";
 import { MusicSheet } from "@/src/components/api/notion/types";
 import ViewOn from "@/src/components/MusicSheetCard/ViewOn";
-import {
-    AddShoppingCart,
-    ShoppingBag,
-    ShoppingBasket,
-    ShoppingCart,
-} from "@mui/icons-material";
+import { ShoppingCart } from "@mui/icons-material";
 
 const cx = classnames.bind(styles);
 
@@ -30,13 +24,13 @@ export default function MusicSheetCard({
 }: MusicSheetCardProps): JSX.Element {
     return (
         <div className={cx("container")}>
-            <Card sx={{ width: "250px" }} className={cx('card')}>
+            <Card sx={{ width: "250px" }} className={cx("card")}>
                 <CardHeader
                     title={`${musicSheet.title} - ${musicSheet.artist}`}
-                    className={cx('card-header')}
+                    className={cx("card-header")}
                     // sx={{height: "20px"}}
                     titleTypographyProps={{
-                        noWrap: true
+                        noWrap: true,
                     }}
                 />
 

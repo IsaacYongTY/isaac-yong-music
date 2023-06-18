@@ -1,12 +1,13 @@
 import React from "react";
 import classnames from "classnames/bind";
 import Image from "next/image";
-import SectionHeader from "@/src/components/SectionHeader";
-import { useRouter } from "next/navigation";
-import styles from "./ArrangementSection.module.scss";
 import MusicSheetPlaceholder from "@/public/homepage/music-sheet-placeholder.jpg";
+import { useRouter } from "next/navigation";
 import { Box, Button } from "@mui/material";
 
+import SectionHeader from "@/src/components/SectionHeader";
+
+import styles from "./ArrangementSection.module.scss";
 const cx = classnames.bind(styles);
 export default function ArrangementSection(): JSX.Element {
     const router = useRouter();

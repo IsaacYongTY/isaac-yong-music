@@ -7,8 +7,8 @@ import Link from "next/link";
 import { Close, Facebook, Instagram, Mail, YouTube } from "@mui/icons-material";
 import { Dialog, DialogContent } from "@mui/material";
 
-import SpotifyLogo from "@/public/spotify-icon-rgb-white.png";
-import BilibiliWhiteLogo from "@/public/bilibili-white-icon.png";
+import SpotifyLogo from "@/public/social-media/spotify-icon-rgb-white.png";
+import BilibiliWhiteLogo from "@/public/social-media/bilibili-white-icon.png";
 import ContactForm from "@/src/components/ContactForm";
 
 import styles from "./SocialMedia.module.scss";
