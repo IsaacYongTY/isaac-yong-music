@@ -107,7 +107,7 @@ export default function SocialMedia({ color }: SocialMediaProps): JSX.Element {
                             ".subtitle": {
                                 width: "100%",
                                 textAlign: "center",
-                                color: "#b28374",
+                                color: "#c1a661",
                             },
                             ".MuiDialogContent-root": {
                                 padding: "0",

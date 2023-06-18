@@ -18,7 +18,7 @@ export default function ListenSection(): JSX.Element {
     const [spotifyLink, setSpotifyLink] = useState(originalSongs[0].link);
 
     return (
-        <div className={cx("container")}>
+        <div className={cx("container")} id="music">
             <SectionHeader title="Listen" noBorder className={cx("header")} />
             <div className={cx("content-container")}>
                 <Spotify link={spotifyLink} />

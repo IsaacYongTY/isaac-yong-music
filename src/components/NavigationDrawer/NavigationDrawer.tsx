@@ -29,9 +29,11 @@ export default function NavigationDrawer({
                 <Close onClick={onClose} className={cx("close-icon")} />
             </div>
             <div className={cx("link-items-container")}>
-                {menu.map((item, index) => (
-                    <DrawerLinkItem item={item} key={index} />
-                ))}
+                {menu
+                    .filter((item) => item.isActive)
+                    .map((item, index) => (
+                        <DrawerLinkItem item={item} key={index} />
+                    ))}
             </div>
 
             <div className={cx("social-media-container")}>

@@ -23,7 +23,7 @@ export default function LinkItem({ item }: LinkItemProps): JSX.Element {
                 selected: item.href === pathname,
             })}
         >
-            <Link href={item.href} title={item.name} className={cx("link")}>
+            <Link href={item.href} title={item.name} className={cx("link")} scroll={false}>
                 {item.name}
             </Link>
             {item.submenu && <KeyboardArrowDown />}

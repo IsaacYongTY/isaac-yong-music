@@ -18,11 +18,13 @@ export default function DropdownMenu({
     return (
         <div className={cx("container")}>
             <div className={cx("dropdown-menu")}>
-                {items.map((sub) => (
-                    <Link key={sub.href} href={sub.href} title={sub.name}>
-                        {sub.name}
-                    </Link>
-                ))}
+                {items
+                    .filter((item) => item.isActive)
+                    .map((sub) => (
+                        <Link key={sub.href} href={sub.href} title={sub.name}>
+                            {sub.name}
+                        </Link>
+                    ))}
             </div>
         </div>
     );

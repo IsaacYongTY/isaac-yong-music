@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 
 import classnames from "classnames/bind";
 import Link from "next/link";
@@ -23,12 +23,19 @@ export default function NavigationBar({
 }: NavigationBarProps): JSX.Element {
     const [showDrawer, setShowDrawer] = useState(false);
 
+    const filteredMenu = useMemo(
+        () => menu.filter((item) => item.isActive),
+        [menu]
+    );
+
     return (
         <div className={cx("container", { sticky: isSticky })}>
             <div className={cx("links-container")}>
-                {menu.slice(0, Math.ceil(menu.length / 2)).map((item) => (
-                    <LinkItem item={item} key={item.href} />
-                ))}
+                {filteredMenu
+                    .slice(0, Math.ceil(filteredMenu.length / 2))
+                    .map((item) => (
+                        <LinkItem item={item} key={item.href} />
+                    ))}
             </div>
 
             <Link href="/">
@@ -36,14 +43,16 @@ export default function NavigationBar({
                     src={IsaacYongSignature}
                     width={200}
                     alt="isaac-yong-signature"
-                    className={cx('signature')}
+                    className={cx("signature")}
                 />
             </Link>
 
             <div className={cx("links-container")}>
-                {menu.slice(Math.ceil(menu.length / 2)).map((item) => (
-                    <LinkItem item={item} key={item.href} />
-                ))}
+                {filteredMenu
+                    .slice(Math.ceil(filteredMenu.length / 2))
+                    .map((item) => (
+                        <LinkItem item={item} key={item.href} />
+                    ))}
             </div>
 
             <div className={cx("drawer-container")}>
