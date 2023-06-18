@@ -9,6 +9,7 @@ import SocialMedia from "@/src/components/SocialMedia/SocialMedia";
 
 import styles from "./Jumbotron.module.scss";
 import { Button } from "@mui/material";
+import Link from "next/link";
 
 const cx = classnames.bind(styles);
 export default function Jumbotron(): JSX.Element {
@@ -58,7 +59,7 @@ export default function Jumbotron(): JSX.Element {
 
                     <div className={cx("button-container")}>
                         <Button variant="contained" size="large">
-                            GET IN TOUCH
+                            <Link href="/contact-backup">GET IN TOUCH</Link>
                         </Button>
                     </div>
 

@@ -8,17 +8,10 @@ const CustomFontTheme = createTheme({
         fontSize: 20,
     },
     palette: {
-        // primary: {
-        //     main: '#0971f1',
-        // },
-        mode: "dark",
         primary: {
-            main: "#b28374",
+            main: "#c1a661",
+            contrastText: "#fff",
         },
-        // secondary: {
-        //     main: "#9F7969",
-        //     // contrastText: '#fff',
-        // },
     },
 });
 

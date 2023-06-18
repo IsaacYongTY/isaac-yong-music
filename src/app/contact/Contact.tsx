@@ -6,6 +6,7 @@ import NavigationBar from "@/src/components/NavigationBar";
 
 import styles from "./Contact.module.scss";
 import Footer from "@/src/components/Footer";
+import SectionHeader from "@/src/components/SectionHeader";
 
 const cx = classnames.bind(styles);
 export default function Contact(): JSX.Element {
@@ -13,6 +14,7 @@ export default function Contact(): JSX.Element {
         <div className={cx("container")}>
             {/*<NavigationBar />*/}
             <div className={cx("content-container")}>
+                <SectionHeader title="CONTACT US" />
                 <div className={cx("subtitle")}>
                     <div>
                         Collaboration or live performances for your event?
@@ -27,7 +29,6 @@ export default function Contact(): JSX.Element {
                     <ContactForm />
                 </div>
             </div>
-            {/*<Footer />*/}
         </div>
     );
 }

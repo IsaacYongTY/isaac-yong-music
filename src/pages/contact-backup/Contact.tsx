@@ -1,13 +1,12 @@
 import React from "react";
 import classnames from "classnames/bind";
 
-import SocialMedia from "@/src/components/SocialMedia/SocialMedia";
-import SectionHeader from "@/src/components/SectionHeader";
 import ContactForm from "@/src/components/ContactForm";
 import NavigationBar from "@/src/components/NavigationBar";
 
 import styles from "./Contact.module.scss";
 import Footer from "@/src/components/Footer";
+import SectionHeader from "@/src/components/SectionHeader";
 
 const cx = classnames.bind(styles);
 export default function Contact(): JSX.Element {
@@ -15,6 +14,7 @@ export default function Contact(): JSX.Element {
         <div className={cx("container")}>
             <NavigationBar />
             <div className={cx("content-container")}>
+                <SectionHeader title="CONTACT US" />
                 <div className={cx("subtitle")}>
                     <div>
                         Collaboration or live performances for your event?
@@ -25,7 +25,7 @@ export default function Contact(): JSX.Element {
                     </div>
                 </div>
                 {/*<SectionHeader title="Contact" />*/}
-                <div className={cx("contact-form-container")}>
+                <div className={cx("contact-backup-form-container")}>
                     <ContactForm />
                 </div>
             </div>

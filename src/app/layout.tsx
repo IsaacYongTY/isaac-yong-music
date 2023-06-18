@@ -15,11 +15,13 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <Provider>
-                <NavigationBar isSticky={false} />
-                <body>{children}</body>
-                <Footer />
-            </Provider>
+            <body>
+                <Provider>
+                    <NavigationBar />
+                    {children}
+                    <Footer />
+                </Provider>
+            </body>
         </html>
     );
 }

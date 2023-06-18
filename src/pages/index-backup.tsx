@@ -5,7 +5,7 @@ import classnames from "classnames/bind";
 import { Button } from "@mui/material";
 import Image from "next/image";
 
-import ComingSoon from "@/src/pages/coming-soon";
+import ComingSoon from "@/src/pages/coming-soon-backup";
 import NavigationBar from "@/src/components/NavigationBar";
 import Jumbotron from "@/src/components/Jumbotron";
 import SectionHeader from "@/src/components/SectionHeader";
