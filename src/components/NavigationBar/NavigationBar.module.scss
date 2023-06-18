@@ -29,6 +29,10 @@
         height: 100%;
     }
 
+    .left {
+        justify-content: flex-end;
+    }
+
     .signature {
         filter: invert(1);
     }

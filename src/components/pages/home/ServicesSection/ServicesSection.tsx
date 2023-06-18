@@ -18,7 +18,8 @@ export default function ServicesSection(): JSX.Element {
                         title={service.title}
                         description={service.description}
                         imageUrl={service.imageUrl}
-                        reverse={(index + 1)/ 2 === 1}
+                        reverse={(index + 1) / 2 === 1}
+                        key={index}
                     />
                 ))}
             </div>

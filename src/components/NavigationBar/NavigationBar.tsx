@@ -30,7 +30,7 @@ export default function NavigationBar({
 
     return (
         <div className={cx("container", { sticky: isSticky })}>
-            <div className={cx("links-container")}>
+            <div className={cx("links-container", "left")}>
                 {filteredMenu
                     .slice(0, Math.ceil(filteredMenu.length / 2))
                     .map((item) => (
@@ -47,7 +47,7 @@ export default function NavigationBar({
                 />
             </Link>
 
-            <div className={cx("links-container")}>
+            <div className={cx("links-container", "right")}>
                 {filteredMenu
                     .slice(Math.ceil(filteredMenu.length / 2))
                     .map((item) => (
