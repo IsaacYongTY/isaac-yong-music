@@ -60,7 +60,7 @@ export default function MusicSheetCard({
                         >
                             <Button
                                 endIcon={<ShoppingCart />}
-                                variant="contained"
+                                variant="outlined"
                             >
                                 Buy
                             </Button>

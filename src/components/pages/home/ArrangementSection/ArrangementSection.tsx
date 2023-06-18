@@ -8,6 +8,7 @@ import { Box, Button } from "@mui/material";
 import SectionHeader from "@/src/components/SectionHeader";
 
 import styles from "./ArrangementSection.module.scss";
+import Link from "next/link";
 const cx = classnames.bind(styles);
 export default function ArrangementSection(): JSX.Element {
     const router = useRouter();
@@ -21,31 +22,35 @@ export default function ArrangementSection(): JSX.Element {
             <div className={cx("content-container")}>
                 <div className={cx("text-container")}>
                     <div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aliquam ac nisl sit amet sapien mattis condimentum sed
-                        ut urna. Nulla viverra, nulla eget congue posuere, diam
-                        velit aliquet ante, vel feugiat nisl purus a nibh.
-                        Vivamus sem ipsum, pellentesque convallis rutrum et,
-                        sollicitudin eu eros. Aenean massa dui, faucibus nec
-                        pellentesque at, viverra vel ipsum. Proin ut erat
-                        ligula. Proin vel ligula non ex consectetur malesuada.
-                        Aenean aliquet velit sed massa pellentesque, eget
-                        porttitor risus porta. Mauris euismod vel leo sed
-                        posuere. Quisque vitae vestibulum turpis. In euismod
-                        elit eget lacus pulvinar aliquet. Maecenas nec
-                        scelerisque ligula. Vestibulum vitae scelerisque leo. Ut
-                        rutrum eros nec blandit ultricies. Vivamus tempus enim
-                        eu nibh laoreet accumsan maximus nec eros. Vestibulum
-                        iaculis non nunc et molestie. Nulla est dolor, vehicula
-                        sed enim vel, facilisis finibus justo.
+                        <p>
+                            Want to skip the hassle of learning by replaying the
+                            videos over and over, and learn all the minutes
+                            details in my arrangement?
+                        </p>
+
+                        <p>
+                            Now you can! If you have watched my video I
+                            encouraged my audience to learn by ear as much as
+                            possible. But sometimes we are just in a bit of a
+                            time crunch, and we don&apos; know what we
+                            don&apos;t know.
+                        </p>
+
+                        <p>
+                            My music sheets are transcribed as close as possible
+                            to what you hear in the videos, so you can learn and
+                            appreciate the details that goes into the
+                            arrangements. I hope they can provide you with
+                            inspirations and tools in your musical journey!
+                        </p>
                     </div>
 
                     <Button
                         variant="outlined"
                         size="large"
-                        onClick={handleOnClick}
+                        // onClick={handleOnClick}
                     >
-                        Browse
+                        <Link href="/music-sheets">Browse</Link>
                     </Button>
                 </div>
                 <div className={cx("image-container")}>

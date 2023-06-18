@@ -20,7 +20,7 @@ export default function IntroSection(): JSX.Element {
                         // height={500}
                     />
                 </div>
-                <div>
+                <div className={cx("text-container")}>
                     <div>
                         <h1>HEY THERE! 👋</h1>
                         <p>
@@ -41,22 +41,23 @@ export default function IntroSection(): JSX.Element {
                             creating memories.
                         </p>
                         <p>
-                            When I&apos;m not out there performing, you can usually
-                            find me huddled in my studio, jamming and recording
-                            both original tracks and covers.
+                            When I&apos;m not out there performing, you can
+                            usually find me huddled in my studio, jamming and
+                            recording both original tracks and covers.
                         </p>
                         <p>
                             I love talking about music just as much as I love
-                            making it. Sharing knowledge and seeing someone&apos;s
-                            eyes light up when they strum their first chord is
-                            like magic to me. Whether it’s through workshops,
-                            online tutorials or just a friendly chat, I&apos;m all
-                            about helping others catch the music bug. 🎶
+                            making it. Sharing knowledge and seeing
+                            someone&apos;s eyes light up when they strum their
+                            first chord is like magic to me. Whether it’s
+                            through workshops, online tutorials or just a
+                            friendly chat, I&apos;m all about helping others
+                            catch the music bug. 🎶
                         </p>
-                        <Button variant="outlined" size="large">
-                            Learn More About Me
-                        </Button>
                     </div>
+                    <Button variant="outlined" size="large">
+                        Learn More About Me
+                    </Button>
                 </div>
             </div>
         </div>

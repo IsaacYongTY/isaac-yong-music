@@ -14,11 +14,14 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
         gap: 4rem;
 
         .image-container {
             display: flex;
             justify-content: center;
+            width: 500px;
+
             img {
                 border-radius: 0.8rem;
             }
@@ -28,8 +31,11 @@
             margin-top: 0;
         }
 
-        > div {
+        .text-container {
             width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
     }
 

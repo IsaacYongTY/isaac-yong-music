@@ -10,6 +10,7 @@ import Footer from "@/src/components/Footer";
 import MusicSheetCard from "@/src/components/MusicSheetCard";
 
 import styles from "./MusicSheets.module.scss";
+import SectionHeader from "@/src/components/SectionHeader";
 const cx = classnames.bind(styles);
 
 export default function MusicSheets(): JSX.Element {
@@ -43,6 +44,7 @@ export default function MusicSheets(): JSX.Element {
             <NavigationBar isSticky={true} />
 
             <div className={cx("content-container")}>
+                <SectionHeader title="MUSIC SHEETS" />
                 <div className={cx("subtitle")}>
                     I am unable to provide the music sheets for free due to
                     copyright restrictions, but you can purchase them on{" "}
