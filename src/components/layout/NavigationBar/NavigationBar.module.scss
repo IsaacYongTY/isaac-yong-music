@@ -1,11 +1,8 @@
-@import "../../../../styles/Common";
+@import "styles/Common";
 
 .container {
-    box-shadow: 0 1px 5px 1px #cecece;
-
-    //box-shadow: 0 1px 5px 1px #1421c7 !important;
     width: 100%;
-
+    background-color: white;
     color: $dark;
     display: flex;
     justify-content: center;
@@ -16,6 +13,7 @@
     position: relative;
     z-index: 2; // to be on top of MUI TextField text
     user-select: none;
+    box-shadow: 0 1px 5px 1px #cecece;
 
     .links-container {
         @media only screen and (max-width: 768px) {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import { Inter } from "@next/font/google";
+import { Inter } from "next/font/google";
 import classnames from "classnames/bind";
 import { Button } from "@mui/material";
 import Image from "next/image";
