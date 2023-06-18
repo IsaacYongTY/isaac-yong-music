@@ -1,8 +1,8 @@
 import React from "react";
 import classnames from "classnames/bind";
 
-import NavigationBar from "@/src/components/NavigationBar";
-import Footer from "@/src/components/Footer";
+import NavigationBar from "@/src/components/layout/NavigationBar";
+import Footer from "@/src/components/layout/Footer";
 
 import styles from "./MusicPage.module.scss";
 

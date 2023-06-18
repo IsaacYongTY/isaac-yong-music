@@ -4,7 +4,7 @@ import styles from "./404.module.scss";
 import classnames from "classnames/bind";
 import { Button } from "@mui/material";
 import Link from "next/link";
-import NavigationBar from "@/src/components/NavigationBar";
+import NavigationBar from "@/src/components/layout/NavigationBar";
 import Image from "next/image";
 
 import MimoInGuitarCase from 'public/mimo-in-guitar-case.jpeg'

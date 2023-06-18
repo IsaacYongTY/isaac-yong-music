@@ -1,0 +1,66 @@
+@import "../../../../styles/Common";
+
+.container {
+    box-shadow: 0 1px 5px 1px #cecece;
+
+    //box-shadow: 0 1px 5px 1px #1421c7 !important;
+    width: 100%;
+
+    color: $dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    box-sizing: border-box;
+    height: 88px;
+    position: relative;
+    z-index: 2; // to be on top of MUI TextField text
+    user-select: none;
+
+    .links-container {
+        @media only screen and (max-width: 768px) {
+            display: none;
+            visibility: hidden;
+        }
+
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        gap: 24px;
+        letter-spacing: 2px;
+        width: 40rem;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    // used to offset distance between logo
+    .left {
+        padding-left: 10rem;
+    }
+
+    .signature {
+        filter: invert(1);
+    }
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.drawer-container {
+    display: none;
+    position: absolute;
+
+    right: 4.5rem;
+    top: 4.5rem;
+
+    @media only screen and (max-width: 768px) {
+        display: block;
+    }
+
+    .menu-icon {
+        font-size: 3rem;
+        cursor: pointer;
+    }
+}

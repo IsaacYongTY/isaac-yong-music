@@ -12,9 +12,9 @@ const cx = classnames.bind(styles);
 export default function Contact(): JSX.Element {
     return (
         <div className={cx("container")}>
+            <NavigationBar />
             <div className={cx("content-container")}>
                 <SectionHeader title="CONTACT US" />
-
                 <div className={cx("subtitle")}>
                     <div>
                         Collaboration or live performances for your event?
@@ -24,11 +24,12 @@ export default function Contact(): JSX.Element {
                         days!
                     </div>
                 </div>
-
-                <div className={cx("contact-form-container")}>
+                {/*<SectionHeader title="Contact" />*/}
+                <div className={cx("contact-deprecate-form-container")}>
                     <ContactForm />
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

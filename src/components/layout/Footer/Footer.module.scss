@@ -1,0 +1,39 @@
+@import "../../../../styles/Common";
+
+.container {
+    width: 100%;
+    min-height: 12rem;
+    background-color: $dark;
+    box-sizing: border-box;
+    color: white;
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    :global {
+        .MuiModal-root {
+            //display: flex;
+            //justify-content: center;
+            //align-items: center;
+
+            top: 50%;
+        }
+    }
+
+    .modal {
+        .container {
+            background-color: yellow;
+            padding: 1.2rem;
+            display: flex;
+        }
+    }
+    .copyright-container {
+        text-align: center;
+        font-size: 1.2rem;
+        .copyright {
+            width: 100%;
+        }
+    }
+}

@@ -2,10 +2,10 @@ import React from "react";
 import classnames from "classnames/bind";
 
 import ContactForm from "@/src/components/ContactForm";
-import NavigationBar from "@/src/components/NavigationBar";
+import NavigationBar from "@/src/components/layout/NavigationBar";
 
 import styles from "./Contact.module.scss";
-import Footer from "@/src/components/Footer";
+import Footer from "@/src/components/layout/Footer";
 
 const cx = classnames.bind(styles);
 export default function Contact(): JSX.Element {

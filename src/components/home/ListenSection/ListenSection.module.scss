@@ -1,0 +1,103 @@
+@import "../../../../styles/Common";
+
+.container {
+    width: 100%;
+    background-color: $dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .header {
+        color: white;
+    }
+
+    .content-container {
+        display: flex;
+        justify-content: center;
+        color: white;
+        gap: 0 16rem;
+        flex-wrap: wrap;
+        margin-bottom: 4.8rem;
+
+        .selector-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .song-list {
+                display: flex;
+                flex-direction: column;
+                margin: 0 2.4rem;
+                align-items: center;
+            }
+        }
+
+        .button {
+            width: 20rem;
+            height: 4rem;
+            border-radius: 2rem;
+            box-shadow: none;
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 1px 1px 10px 2px #656565;
+            }
+        }
+
+        .selected {
+            border: 2px solid #1dd860;
+            background-color: #1dd860;
+            color: $dark;
+        }
+    }
+
+    .cta-container {
+        display: flex;
+        justify-content: center;
+
+        button {
+            width: 22rem;
+            height: 4.8rem;
+            border-radius: 2.4rem;
+            box-shadow: none;
+            border: 2px solid #1dd860;
+            background-color: #1dd860;
+            color: $dark;
+            font-size: 1.6rem;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            font-weight: 600;
+
+            &:hover {
+                box-shadow: 1px 1px 10px 2px #656565;
+            }
+        }
+    }
+
+    .other-platforms-container {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 4.8rem 0 1.6rem 0;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+
+        .qq-music-logo {
+            margin-right: 1.6rem;
+        }
+
+        .kk-box-logo {
+            object-fit: cover;
+            margin-right: 0.8rem;
+        }
+
+        .apple-music-logo {
+            padding-right: 0.8rem; // to offset to center due to KK Box logo gap
+        }
+    }
+}

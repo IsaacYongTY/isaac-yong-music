@@ -6,10 +6,10 @@ import { Button } from "@mui/material";
 import Image from "next/image";
 
 import ComingSoon from "@/src/pages/coming-soon-backup";
-import NavigationBar from "@/src/components/NavigationBar";
-import Jumbotron from "@/src/components/Jumbotron";
+import NavigationBar from "@/src/components/layout/NavigationBar";
+import Jumbotron from "@/src/components/home/Jumbotron";
 import SectionHeader from "@/src/components/SectionHeader";
-import Footer from "@/src/components/Footer";
+import Footer from "@/src/components/layout/Footer";
 import VideoPlayer from "@/src/components/VideoPlayer";
 import AdamChanGuitars from "@/public/adam-chan-logo.png";
 import LittleBandPlusLogo from "@/public/little-band-plus-logo.jpg";
@@ -19,13 +19,13 @@ import YamahaLogo from "@/public/yamaha-logo.png";
 
 import { ENABLE_COMING_SOON_REDIRECT } from "@/flags";
 import styles from "@/styles/Home.module.scss";
-import PartnersSection from "@/src/components/pages/home/PartnersSection";
-import IntroSection from "@/src/components/pages/home/IntroSection";
-import ListenSection from "@/src/components/pages/home/ListenSection";
-import ServicesSection from "@/src/components/pages/home/ServicesSection";
-import LatestVideoSection from "@/src/components/pages/home/LatestVideoSection";
-import ArrangementSection from "@/src/components/pages/home/ArrangementSection";
-import UpcomingEventsSection from "@/src/components/pages/home/UpcomingEventsSection";
+import PartnersSection from "@/src/components/home/PartnersSection";
+import IntroSection from "@/src/components/home/IntroSection";
+import ListenSection from "@/src/components/home/ListenSection";
+import ServicesSection from "@/src/components/home/ServicesSection";
+import LatestVideoSection from "@/src/components/home/LatestVideoSection";
+import ArrangementSection from "@/src/components/home/ArrangementSection";
+import UpcomingEventsSection from "@/src/components/home/UpcomingEventsSection";
 
 const cx = classnames.bind(styles);
 

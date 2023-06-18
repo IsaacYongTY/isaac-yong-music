@@ -1,7 +1,8 @@
-import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { Client, isFullPage } from "@notionhq/client";
+import process from "process";
+import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+
 import { derivePageObjectResponseToMusicSheet } from "@/src/components/api/notion/utils";
-import * as process from "process";
 
 export const getMusicSheets = async () => {
     const notion = new Client({
@@ -10,7 +11,6 @@ export const getMusicSheets = async () => {
 
     const databaseId = process.env.NEXT_PUBLIC_NOTION_DATABASE_ID;
 
-    console.log(databaseId);
     try {
         const { results } = await notion.databases.query({
             database_id: databaseId,
