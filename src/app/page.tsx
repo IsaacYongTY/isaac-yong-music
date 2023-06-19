@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Head from "next/head";
 import classnames from "classnames/bind";
 import { Metadata } from "next";
 
@@ -18,7 +16,7 @@ import ArrangementSection from "@/src/components/home/ArrangementSection";
 import UpcomingEventsSection from "@/src/components/home/UpcomingEventsSection";
 
 import NavigationBar from "@/src/components/layout/NavigationBar";
-import Footer from '@/src/components/layout/Footer';
+import Footer from "@/src/components/layout/Footer";
 
 import styles from "@/styles/Home.module.scss";
 const cx = classnames.bind(styles);
@@ -35,21 +33,19 @@ export default function Home() {
     }
 
     return (
-        <>
-            <main className={cx("main")}>
-                <NavigationBar />
-                <Jumbotron />
+        <main className={cx("main")}>
+            <NavigationBar />
+            <Jumbotron />
 
-                <IntroSection />
-                <PartnersSection />
-                <ServicesSection />
-                <UpcomingEventsSection />
-                <LatestVideoSection />
-                <ListenSection />
-                <ArrangementSection />
+            <IntroSection />
+            <PartnersSection />
+            <ServicesSection />
+            <UpcomingEventsSection />
+            <LatestVideoSection />
+            <ListenSection />
+            <ArrangementSection />
 
-                <Footer />
-            </main>
-        </>
+            <Footer />
+        </main>
     );
 }
