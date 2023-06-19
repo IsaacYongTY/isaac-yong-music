@@ -4,9 +4,9 @@ import Link from "next/link";
 
 import MusicSheetCard from "./MusicSheetCard";
 
-import { MusicSheet } from "@/src/components/api/notion/types";
+import { MusicSheet } from "@/src/app/(website)/music-sheets/types";
 import SectionHeader from "@/src/components/SectionHeader";
-import { getMusicSheets } from "@/src/app/(website)/music-sheets/utils";
+import { getMusicSheets } from "@/src/app/(website)/music-sheets/api";
 
 import styles from "./MusicSheets.module.scss";
 

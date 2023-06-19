@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
-import { RecaptchaApiSiteVerifyPayload } from "@/src/pages/api/recaptcha/types";
+import { RecaptchaApiSiteVerifyPayload } from "@/src/pages/api-deprecate/recaptcha/types";
 
 type Data = {
     name?: string;

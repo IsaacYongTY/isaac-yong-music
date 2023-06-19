@@ -12,7 +12,7 @@ import {
     CardMedia,
     Link,
 } from "@mui/material";
-import { MusicSheet } from "@/src/components/api/notion/types";
+import { MusicSheet } from "@/src/app/(website)/music-sheets/types";
 import ViewOn from "@/src/app/(website)/music-sheets/MusicSheetCard/ViewOn";
 import { ShoppingCart } from "@mui/icons-material";
 import { Metadata } from "next";

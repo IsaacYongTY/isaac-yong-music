@@ -1,43 +1,62 @@
-import { Client, isFullPage } from "@notionhq/client";
-import process from "process";
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
-import { derivePageObjectResponseToMusicSheet } from "@/src/components/api/notion/utils";
+import { MusicSheet } from "./types";
+import { defaultMusicSheet } from "./constants";
 
-export const getMusicSheets = async () => {
-    const notion = new Client({
-        auth: process.env.NEXT_PUBLIC_NOTION_SECRET_KEY,
-    });
+export const derivePageObjectResponseToMusicSheet = (
+    res: PageObjectResponse
+): MusicSheet => {
+    const result = { ...defaultMusicSheet };
 
-    const databaseId = process.env.NEXT_PUBLIC_NOTION_DATABASE_ID || '';
+    // TODO: to decide if we should refactor
+    const {
+        title,
+        artist,
+        youTubeUrl,
+        bilibiliUrl,
+        myMusicSheetUrl,
+        spotifyUrl,
+        thumbnail,
+    } = res.properties;
 
-    try {
-        const { results } = await notion.databases.query({
-            database_id: databaseId,
-            filter: {
-                property: "isActive",
-                checkbox: {
-                    equals: true,
-                },
-            },
-        });
-
-        //TODO: handle situation when result is more than 100 as that is the maximum
-
-        const isFullPageResults: PageObjectResponse[] = [];
-
-        results.forEach((result) => {
-            if (!isFullPage(result)) {
-                return;
-            }
-
-            isFullPageResults.push(result);
-        });
-
-        return isFullPageResults.map((d) =>
-            derivePageObjectResponseToMusicSheet(d)
-        );
-    } catch (err) {
-        throw err;
+    if (!title || !artist || !myMusicSheetUrl) {
+        return result;
     }
+
+    if (title.type === "title" && title.title.length !== 0) {
+        // console.log('title');
+        // console.log(title.title);
+        result.title = title.title[0].plain_text;
+    }
+
+    if (artist.type === "rich_text" && artist.rich_text.length !== 0) {
+        result.artist = artist.rich_text[0].plain_text;
+    }
+
+    if (youTubeUrl && youTubeUrl.type === "url" && youTubeUrl.url !== null) {
+        result.youTubeUrl = youTubeUrl.url || "";
+    }
+    if (bilibiliUrl && bilibiliUrl.type === "url" && bilibiliUrl.url !== null) {
+        result.bilibiliUrl = bilibiliUrl.url;
+    }
+
+    if (
+        myMusicSheetUrl &&
+        myMusicSheetUrl.type === "url" &&
+        myMusicSheetUrl.url !== null
+    ) {
+        result.myMusicSheetUrl = myMusicSheetUrl.url;
+    }
+
+    if (spotifyUrl && spotifyUrl.type === "url" && spotifyUrl.url !== null) {
+        result.spotifyUrl = spotifyUrl.url;
+    }
+
+    if (thumbnail.type === "files" && thumbnail.files.length !== 0) {
+        if (thumbnail.files[0].type === "file") {
+            result.thumbnail = thumbnail.files[0].file.url;
+        }
+    }
+
+    return result;
 };

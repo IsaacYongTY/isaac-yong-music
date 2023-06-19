@@ -1,4 +1,4 @@
-import { MusicSheet } from "@/src/components/api/notion/types";
+import { MusicSheet } from "@/src/app/(website)/music-sheets/types";
 
 export const defaultMusicSheet: MusicSheet = {
     title: "",
