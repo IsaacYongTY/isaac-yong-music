@@ -8,22 +8,40 @@
     align-items: center;
     margin-bottom: 4rem;
     font-size: 1.6rem;
-    margin-top: 6.4rem;
+    margin-top: 6rem;
+    padding: 0 2.4rem;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        padding: 0 10rem;
+    }
 
     .content-container {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-
+        align-items: center;
         gap: 4rem;
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+            flex-direction: column;
+        }
 
         .image-container {
             display: flex;
             justify-content: center;
-            width: 500px;
+            width: 400px;
+
+            @media only screen and (max-width: 768px) {
+                width: 100%;
+                margin: 0 2.4rem;
+            }
 
             img {
                 border-radius: 0.8rem;
+                object-fit: contain;
+                margin: 0 2rem;
+                height: unset !important;
             }
         }
 
@@ -32,22 +50,17 @@
         }
 
         .text-container {
-            width: 500px;
+            width: 400px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            @media only screen and (max-width: 480px) {
+                width: 90%;
+                padding: 0 4rem;
+            }
         }
     }
 
-    @media only screen and (max-width: 768px) {
-        width: 100%;
-    }
 
-    @media only screen and (max-width: 480px) {
-        width: 100%;
-
-        > div {
-            padding: 0 2.4rem;
-        }
-    }
 }

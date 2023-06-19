@@ -19,15 +19,15 @@ export default function PartnersSection(): JSX.Element {
                 <div className={cx("logo-container")}>
                     <Image
                         src={AdamChanGuitars}
-                        width={150}
+                        width={120}
                         alt="adam-chan-guitars"
                     />
                     <Image
                         src={LittleBandPlusLogo}
-                        width={150}
+                        width={120}
                         alt="little-band-plus"
                     />
-                    <Image src={YamahaLogo} height={50} alt="yamaha-logo" />
+                    <Image src={YamahaLogo} height={40} alt="yamaha-logo" />
                 </div>
 
                 <div className={cx("button-container")}>

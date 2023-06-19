@@ -1,28 +1,48 @@
 import React from "react";
 import classnames from "classnames/bind";
 
+import { EventInfo } from "../types";
+
 import styles from "./EventCard.module.scss";
 
 const cx = classnames.bind(styles);
-export default function EventCard() {
+
+type EventCardProps = {
+    event: EventInfo;
+};
+export default function EventCard({ event }: EventCardProps) {
     return (
         <div className={cx("container")}>
-            <div>
-                <div>
-                    <div>Escobar</div>
-                    <div>with Zerlene Cheng</div>
+            <div className={cx("row")}>
+                <div className={cx("venue-container")}>
+                    <div className={cx("venue")}>{event.venue}</div>
+                    <div>with {event.partners.join(", ")}</div>
                 </div>
-                <div>
-                    <div>7.45pm - 10.45pm</div>
-                    <div>Friday</div>
-                </div>
-
-                <div>
-                    <div>Mandopop, Cantopop, Top 40</div>
-                    <div>
-                        <a>GET DIRECTION</a>
-                        <a>MAKE RESERVATION</a>
+                <div className={cx("date-container")}>
+                    <div className={cx("date")}>{event.date}</div>
+                    <div className={cx("time")}>
+                        {event.startTime} - {event.endTime}
                     </div>
+                </div>
+            </div>
+
+            <div className={cx("row")}>
+                <div>{event.genres.join(", ")}</div>
+                <div className={cx("action-container")}>
+                    <a
+                        href={event.websiteUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        WEBSITE
+                    </a>
+                    <a
+                        href={event.googleUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GET DIRECTION
+                    </a>
                 </div>
             </div>
         </div>

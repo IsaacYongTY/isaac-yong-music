@@ -16,8 +16,7 @@ export default function IntroSection(): JSX.Element {
                     <Image
                         src={IsaacIntroPhoto}
                         alt={"rockestra-isaac-electric-guitar"}
-                        width={400}
-                        // height={500}
+                        // width={400}
                     />
                 </div>
                 <div className={cx("text-container")}>

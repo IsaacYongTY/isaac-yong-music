@@ -50,7 +50,7 @@ export default function ArrangementSection(): JSX.Element {
                         size="large"
                         // onClick={handleOnClick}
                     >
-                        <Link href="/music-sheets-backup">Browse</Link>
+                        <Link href="/music-sheets">Browse</Link>
                     </Button>
                 </div>
                 <div className={cx("image-container")}>
