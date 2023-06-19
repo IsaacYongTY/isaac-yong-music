@@ -1,7 +1,5 @@
 import "@/styles/globals.scss";
 import Provider from "./Provider";
-import NavigationBar from "@/src/components/layout/NavigationBar";
-import Footer from "@/src/components/layout/Footer";
 import React from "react";
 
 import { Roboto } from 'next/font/google'
@@ -21,9 +19,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={roboto.className}>
                 <Provider>
-                    <NavigationBar />
                     {children}
-                    <Footer />
                 </Provider>
             </body>
         </html>

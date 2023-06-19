@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import IsaacYongSignature from "@/public/isaac-yong-signature.png";
-import { menu } from "@/src/common/constants";
+import { menu } from "@/src/common/menu";
 import LinkItem from "@/src/components/layout/NavigationBar/LinkItem";
 import { Close, Menu } from "@mui/icons-material";
 import NavigationDrawer from "@/src/components/layout/NavigationDrawer";

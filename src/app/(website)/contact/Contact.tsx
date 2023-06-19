@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import classnames from "classnames/bind";
 
 import ContactForm from "@/src/components/ContactForm";
@@ -7,9 +7,10 @@ import NavigationBar from "@/src/components/layout/NavigationBar";
 import styles from "./Contact.module.scss";
 import Footer from "@/src/components/layout/Footer";
 import SectionHeader from "@/src/components/SectionHeader";
+import WebsiteLayout from "@/src/app/(website)/layout";
 
 const cx = classnames.bind(styles);
-export default function Contact(): JSX.Element {
+export default function Contact() {
     return (
         <div className={cx("container")}>
             <div className={cx("content-container")}>
@@ -32,3 +33,4 @@ export default function Contact(): JSX.Element {
         </div>
     );
 }
+

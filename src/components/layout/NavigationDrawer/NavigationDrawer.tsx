@@ -3,7 +3,7 @@ import classnames from "classnames/bind";
 
 import styles from "./NavigationDrawer.module.scss";
 import { Close } from "@mui/icons-material";
-import { menu } from "@/src/common/constants";
+import { menu } from "@/src/common/menu";
 import DrawerLinkItem from "@/src/components/layout/NavigationDrawer/DrawerLinkItem";
 import SocialMedia from "@/src/components/SocialMedia";
 import { Drawer } from "@mui/material";

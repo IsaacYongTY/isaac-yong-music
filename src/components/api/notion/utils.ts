@@ -1,6 +1,6 @@
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { MusicSheet } from "@/src/components/api/notion/types";
-import { defaultMusicSheet } from "@/src/app/music-sheets/constants";
+import { defaultMusicSheet } from "@/src/app/(website)/music-sheets/constants";
 
 export const derivePageObjectResponseToMusicSheet = (
     res: PageObjectResponse

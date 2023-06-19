@@ -1,48 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import classnames from "classnames/bind";
-import axios from "axios";
 import Link from "next/link";
-import { enqueueSnackbar, SnackbarProvider } from "notistack";
+
+import MusicSheetCard from "./MusicSheetCard";
 
 import { MusicSheet } from "@/src/components/api/notion/types";
-import NavigationBar from "@/src/components/layout/NavigationBar";
-import Footer from "@/src/components/layout/Footer";
-import MusicSheetCard from "@/src/app/music-sheets/MusicSheetCard";
+import SectionHeader from "@/src/components/SectionHeader";
+import { getMusicSheets } from "@/src/app/(website)/music-sheets/utils";
 
 import styles from "./MusicSheets.module.scss";
-import SectionHeader from "@/src/components/SectionHeader";
+
 const cx = classnames.bind(styles);
 
-export default function MusicSheets(): JSX.Element {
-    const [musicSheets, setMusicSheets] = useState<MusicSheet[]>([]);
-    const fetchMusicSheets = async () => {
-        try {
-            const { data } = await axios.get<{ data: MusicSheet[] }>(
-                "/api/notion/music-sheet"
-            );
+export default async function MusicSheets() {
+    const musicSheets = await getMusicSheets();
 
-            console.log(data);
-            setMusicSheets(data.data);
-        } catch (err) {
-            enqueueSnackbar({
-                message: "Something went wrong. Please try again later",
-                variant: "error",
-            });
-            console.log(err);
-        }
-    };
-
-    useEffect(() => {
-        fetchMusicSheets();
-    }, []);
     return (
         <div className={cx("container")}>
-            <SnackbarProvider
-                className={cx("snackbar")}
-                anchorOrigin={{ horizontal: "center", vertical: "bottom" }}
-            />
-            <NavigationBar isSticky={true} />
-
             <div className={cx("content-container")}>
                 <SectionHeader title="MUSIC SHEETS" />
                 <div className={cx("subtitle")}>
@@ -67,8 +41,6 @@ export default function MusicSheets(): JSX.Element {
                     ))}
                 </div>
             </div>
-
-            <Footer />
         </div>
     );
 }
