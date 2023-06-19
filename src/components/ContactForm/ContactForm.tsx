@@ -19,6 +19,13 @@ const ContactForm: React.FC = () => {
 
     const { executeRecaptcha } = useGoogleReCaptcha();
 
+    const clearForm = () => {
+        setEmail("");
+        setFirstName("");
+        setLastName("");
+        setSubject("");
+        setMessage("");
+    };
     const submitForm = async () => {
         try {
             await axios.post("/api/contact", {
@@ -55,13 +62,13 @@ const ContactForm: React.FC = () => {
             await verifyRecaptcha(token);
             await submitForm();
 
+            clearForm();
+
             enqueueSnackbar({
                 message: "Your message has been sent successfully!",
                 variant: "success",
             });
-        } catch (err) {
-            console.log(err);
-
+        } catch {
             enqueueSnackbar({
                 message: "Something went wrong. Please try again later",
                 variant: "error",
