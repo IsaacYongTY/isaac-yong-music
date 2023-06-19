@@ -1,8 +1,6 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from "next";
-import * as SibApiV3Sdk from "@sendinblue/client";
 import * as process from "process";
 import { NextRequest, NextResponse } from "next/server";
+import * as SibApiV3Sdk from "@sendinblue/client";
 
 export async function POST(req: NextRequest) {
    const body = await req.json()
@@ -44,7 +42,7 @@ export async function POST(req: NextRequest) {
         });
     } catch (err) {
         console.log(err);
-        return new NextResponse.json(
+        return NextResponse.json(
             { error: "Internal server error" },
             { status: 500 }
         );
