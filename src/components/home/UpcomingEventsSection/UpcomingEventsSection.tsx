@@ -6,6 +6,7 @@ import SectionHeader from "@/src/components/SectionHeader";
 import PlayingGuitarCloseUp from "@/public/homepage/playing-guitar-close-up.png";
 
 import styles from "./UpcomingEventsSection.module.scss";
+import EventCard from "@/src/components/home/UpcomingEventsSection/EventCard";
 
 const cx = classnames.bind(styles);
 export default function UpcomingEventsSection(): JSX.Element {
@@ -23,7 +24,9 @@ export default function UpcomingEventsSection(): JSX.Element {
                     alt="playing-guitar-close-up"
                 />
             </div>
-            <div className={cx("content-container")}></div>
+            <div className={cx("content-container")}>
+                <EventCard />
+            </div>
         </div>
     );
 }

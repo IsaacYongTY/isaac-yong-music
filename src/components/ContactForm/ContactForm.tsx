@@ -5,9 +5,9 @@ import classnames from "classnames/bind";
 import axios from "axios";
 import { Button, TextField } from "@mui/material";
 import { enqueueSnackbar, SnackbarProvider } from "notistack";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 import styles from "./ContactForm.module.scss";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const cx = classnames.bind(styles);
 const ContactForm: React.FC = () => {

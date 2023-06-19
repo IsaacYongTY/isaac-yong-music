@@ -1,10 +1,10 @@
 import axios from "axios";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import * as process from "process";
 
 import { RecaptchaApiSiteVerifyPayload } from "./types";
 
-export async function POST(req: NextResponse) {
+export async function POST(req: NextRequest) {
     // handler
     const body = await req.json()
     const { token } = body;
