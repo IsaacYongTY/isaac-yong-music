@@ -9,6 +9,7 @@ import EventCard from "@/src/components/home/UpcomingEventsSection/EventCard";
 import { eventsInfo } from "@/src/components/home/UpcomingEventsSection/constants";
 
 import styles from "./UpcomingEventsSection.module.scss";
+
 const cx = classnames.bind(styles);
 
 export default function UpcomingEventsSection(): JSX.Element {

@@ -2,7 +2,7 @@ import "@/styles/globals.scss";
 import Provider from "./Provider";
 import React from "react";
 
-import { Roboto } from 'next/font/google'
+import { Inter, Roboto } from "next/font/google";
 
 const roboto = Roboto({
     weight: ['400', '500', '700'],
@@ -10,6 +10,14 @@ const roboto = Roboto({
     subsets: ['latin'],
     display: 'swap',
 })
+
+const inter = Inter({
+    weight: ['400', '500', '700'],
+    style: ['normal'],
+    subsets: ['latin'],
+    display: 'swap',
+})
+
 export default function RootLayout({
     children,
 }: {
@@ -17,7 +25,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={roboto.className}>
+            <body className={inter.className}>
                 <Provider>
                     {children}
                 </Provider>

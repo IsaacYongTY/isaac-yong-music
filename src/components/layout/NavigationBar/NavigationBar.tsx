@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 import classnames from "classnames/bind";
 import Link from "next/link";
@@ -13,6 +13,7 @@ import { Close, Menu } from "@mui/icons-material";
 import NavigationDrawer from "@/src/components/layout/NavigationDrawer";
 
 import styles from "./NavigationBar.module.scss";
+import { useRouter } from "next/navigation";
 const cx = classnames.bind(styles);
 
 type NavigationBarProps = {
@@ -21,12 +22,17 @@ type NavigationBarProps = {
 export default function NavigationBar({
     isSticky = false,
 }: NavigationBarProps): JSX.Element {
+    const router = useRouter();
     const [showDrawer, setShowDrawer] = useState(false);
 
     const filteredMenu = useMemo(
         () => menu.filter((item) => item.isActive),
         []
     );
+
+    useEffect(() => {
+        setShowDrawer(false);
+    }, [router.asPath]);
 
     return (
         <div className={cx("container", { sticky: isSticky })}>

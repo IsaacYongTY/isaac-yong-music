@@ -4,7 +4,7 @@ export const eventsInfo = [
         partners: ["Natalie Tan", "Lyonel Tan"],
         startTime: "7pm",
         endTime: "10pm",
-        date: "Every Wednesday",
+        date: "Every Wed",
         genres: ["Mandopop", "Cantopop", "Top 40"],
         googleUrl: "https://goo.gl/maps/XWfArM2ktef6SREF8",
         websiteUrl: "https://www.tenplus.sg/"
@@ -14,7 +14,7 @@ export const eventsInfo = [
         partners: ["Elizabeth Lou", "Daryl Loh"],
         startTime: "7.30pm",
         endTime: "10.30pm",
-        date: "Every Thursday",
+        date: "Every Thu",
         genres: ["Mandopop", "Cantopop", "Top 40"],
         googleUrl: "https://goo.gl/maps/5eyt7PSt9LrrxBieA",
         websiteUrl: "https://www.instagram.com/lewhite_bar"
@@ -24,7 +24,7 @@ export const eventsInfo = [
         partners: ["Zerlene Cheng"],
         startTime: "7.45pm",
         endTime: "10.45pm",
-        date: "Every Friday",
+        date: "Every Fri",
         genres: ["Mandopop", "Cantopop", "Top 40"],
         googleUrl: "https://goo.gl/maps/cJf7ndFqEevqH8Cr8",
         websiteUrl: "https://www.instagram.com/bistroescobar"

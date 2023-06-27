@@ -32,7 +32,7 @@ export default function NavigationDrawer({
                 {menu
                     .filter((item) => item.isActive)
                     .map((item, index) => (
-                        <DrawerLinkItem item={item} key={index} />
+                        <DrawerLinkItem item={item} key={index} onClose={onClose} />
                     ))}
             </div>
 

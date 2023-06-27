@@ -6,6 +6,7 @@ import SectionHeader from "@/src/components/SectionHeader";
 import styles from "./ServicesSection.module.scss";
 import ServiceCard from "@/src/components/home/ServicesSection/ServiceCard";
 import { servicesInfo } from "@/src/components/home/ServicesSection/constants";
+import FadeInSection from "@/src/components/FadeInSection";
 
 const cx = classnames.bind(styles);
 export default function ServicesSection(): JSX.Element {

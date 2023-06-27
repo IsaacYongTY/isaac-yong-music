@@ -89,6 +89,7 @@ const ContactForm: React.FC = () => {
                     variant="outlined"
                     value={email}
                     required
+                    fullWidth
                 />
 
                 <div className={cx("name-input-container")}>

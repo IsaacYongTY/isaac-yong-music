@@ -24,13 +24,13 @@ export const menu: MenuItem[] = [
         ],
     },
     {
-        href: "/#music",
-        name: "Music",
+        href: "/#videos",
+        name: "Videos",
         isActive: true,
     },
     {
-        href: "/#videos",
-        name: "Videos",
+        href: "/#music",
+        name: "Music",
         isActive: true,
     },
     {

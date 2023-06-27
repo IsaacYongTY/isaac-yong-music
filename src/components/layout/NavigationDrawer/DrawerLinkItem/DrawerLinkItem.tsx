@@ -10,10 +10,12 @@ import styles from "./DrawerLinkItem.module.scss";
 const cx = classnames.bind(styles);
 type DrawerLinkItemProps = {
     item: MenuItem;
+    onClose: () => void;
 };
 export default function DrawerLinkItem({
     item,
-}: DrawerLinkItemProps): JSX.Element {
+    onClose,
+}: DrawerLinkItemProps) {
     const [showSubmenu, setShowSubmenu] = useState(false);
 
     const renderArrow = () => {

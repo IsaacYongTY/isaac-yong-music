@@ -9,17 +9,7 @@ import {
     CardContent,
     CardHeader,
     CardMedia,
-    Link,
 } from "@mui/material";
-import SocialMedia from "@/src/components/SocialMedia";
-import { MusicSheet } from "@/src/app/(website)/music-sheets/types";
-import ViewOn from "@/src/app/(website)/music-sheets/MusicSheetCard/ViewOn";
-import {
-    AddShoppingCart,
-    ShoppingBag,
-    ShoppingBasket,
-    ShoppingCart,
-} from "@mui/icons-material";
 import { StaticImageData } from "next/image";
 
 const cx = classnames.bind(styles);
@@ -37,7 +27,10 @@ export default function ServiceCard({
     reverse = false,
 }: MusicSheetCardProps): JSX.Element {
     return (
-        <Card sx={{ display: "flex" }} className={cx("container")}>
+        <Card
+            sx={{ display: "flex", borderRadius: "8px" }}
+            className={cx("container")}
+        >
             <CardContent
                 className={cx("card-content-container", { reverse })}
                 sx={{ ":last-child": { padding: 0 } }}
