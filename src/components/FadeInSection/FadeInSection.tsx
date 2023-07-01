@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import classnames from "classnames/bind";
 
 import styles from "./FadeInSection.module.scss";
@@ -6,12 +6,14 @@ import { Fade } from "@mui/material";
 
 const cx = classnames.bind(styles);
 
-type SectionHeaderProps = {
-    title: string;
-    noBorder?: boolean;
-    className?: string;
+type FadeInSectionProps = {
+    children?: ReactNode;
+    reverse: boolean;
 };
-export default function FadeInSection({ children, reverse }) {
+export default function FadeInSection({
+    children,
+    reverse,
+}: FadeInSectionProps) {
     const [isVisible, setVisible] = useState(true);
     const domRef = useRef<HTMLInputElement | null>(null);
 
