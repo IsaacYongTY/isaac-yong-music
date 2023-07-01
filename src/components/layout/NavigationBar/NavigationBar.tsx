@@ -13,7 +13,7 @@ import { Close, Menu } from "@mui/icons-material";
 import NavigationDrawer from "@/src/components/layout/NavigationDrawer";
 
 import styles from "./NavigationBar.module.scss";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 const cx = classnames.bind(styles);
 
 type NavigationBarProps = {
