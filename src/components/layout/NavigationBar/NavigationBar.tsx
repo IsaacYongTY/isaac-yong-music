@@ -13,7 +13,7 @@ import { Close, Menu } from "@mui/icons-material";
 import NavigationDrawer from "@/src/components/layout/NavigationDrawer";
 
 import styles from "./NavigationBar.module.scss";
-import { useRouter } from "next/router";
+import { usePathname, useSearchParams } from "next/navigation";
 const cx = classnames.bind(styles);
 
 type NavigationBarProps = {
@@ -22,7 +22,9 @@ type NavigationBarProps = {
 export default function NavigationBar({
     isSticky = false,
 }: NavigationBarProps): JSX.Element {
-    const router = useRouter();
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
+
     const [showDrawer, setShowDrawer] = useState(false);
 
     const filteredMenu = useMemo(
@@ -30,9 +32,10 @@ export default function NavigationBar({
         []
     );
 
+    // close the drawer if there is change in path
     useEffect(() => {
         setShowDrawer(false);
-    }, [router.asPath]);
+    }, [pathname, searchParams]);
 
     return (
         <div className={cx("container", { sticky: isSticky })}>
