@@ -1,5 +1,36 @@
 export const eventsInfo = [
     {
+        venue: "Essen@Anchorvale",
+        partners: ["Little Band Plus"],
+        startTime: "7.30pm",
+        endTime: "10.30pm",
+        date: "Every Sun",
+        genres: ["Mandopop", "Cantopop", "Top 40"],
+        googleUrl: "https://goo.gl/maps/mphFkRoHpkw2XZZ98",
+        websiteUrl: "https://essensg.wixsite.com/essen",
+    },
+    {
+        venue: "Essen@Anchorvale",
+        partners: ["Jurine Chia", "August Lum", "Darren Ong"],
+        startTime: "7.30pm",
+        endTime: "10.30pm",
+        date: "Every Mon",
+        genres: ["Mandopop", "Cantopop", "Top 40"],
+        googleUrl: "https://goo.gl/maps/mphFkRoHpkw2XZZ98",
+        websiteUrl: "https://essensg.wixsite.com/essen",
+    },
+
+    {
+        venue: "Relax Bar",
+        partners: ["Tingzhi"],
+        startTime: "8pm",
+        endTime: "11pm",
+        date: "Every Tue",
+        genres: ["Mandopop", "Cantopop", "Top 40"],
+        googleUrl: "https://goo.gl/maps/PkFo47oHM7wEvP9Y9",
+        websiteUrl: "https://www.facebook.com/relaxbistrobar/",
+    },
+    {
         venue: "Tenplus",
         partners: ["Natalie Tan", "Lyonel Tan"],
         startTime: "7pm",
@@ -7,26 +38,16 @@ export const eventsInfo = [
         date: "Every Wed",
         genres: ["Mandopop", "Cantopop", "Top 40"],
         googleUrl: "https://goo.gl/maps/XWfArM2ktef6SREF8",
-        websiteUrl: "https://www.tenplus.sg/"
+        websiteUrl: "https://www.tenplus.sg/",
     },
     {
         venue: "Le White Bar",
-        partners: ["Elizabeth Lou", "Daryl Loh"],
-        startTime: "7.30pm",
-        endTime: "10.30pm",
+        partners: ["Jia Ling", "Daryl Loh"],
+        startTime: "8pm",
+        endTime: "11pm",
         date: "Every Thu",
         genres: ["Mandopop", "Cantopop", "Top 40"],
         googleUrl: "https://goo.gl/maps/5eyt7PSt9LrrxBieA",
-        websiteUrl: "https://www.instagram.com/lewhite_bar"
-    },
-    {
-        venue: "Escobar",
-        partners: ["Zerlene Cheng"],
-        startTime: "7.45pm",
-        endTime: "10.45pm",
-        date: "Every Fri",
-        genres: ["Mandopop", "Cantopop", "Top 40"],
-        googleUrl: "https://goo.gl/maps/cJf7ndFqEevqH8Cr8",
-        websiteUrl: "https://www.instagram.com/bistroescobar"
+        websiteUrl: "https://www.instagram.com/lewhite_bar",
     },
 ];

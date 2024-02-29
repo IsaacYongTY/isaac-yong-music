@@ -48,11 +48,11 @@
 
         .action-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             text-decoration: underline;
+            width: 100%;
 
             a {
-                //width: 12rem;
                 cursor: pointer;
                 text-align: right;
                 margin-left: 4rem;

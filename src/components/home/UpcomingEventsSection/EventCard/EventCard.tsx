@@ -27,7 +27,6 @@ export default function EventCard({ event }: EventCardProps) {
             </div>
 
             <div className={cx("row")}>
-                <div>{event.genres.join(", ")}</div>
                 <div className={cx("action-container")}>
                     <a
                         href={event.websiteUrl}
