@@ -1,9 +1,12 @@
 import React from "react";
 import classnames from "classnames/bind";
 import Image from "next/image";
-import MusicSheetPlaceholder from "@/public/homepage/music-sheet-placeholder.jpg";
+import MusicSheet from "@/public/homepage/music-sheet.jpg";
+import MusicSheetBlackBg from "@/public/homepage/music-sheet-black-bg.jpg";
+import MusicSheetPinkBg from "@/public/homepage/music-sheet-pink-bg.jpg";
 import { useRouter } from "next/navigation";
 import { Box, Button } from "@mui/material";
+
 
 import SectionHeader from "@/src/components/SectionHeader";
 
@@ -56,7 +59,7 @@ export default function ArrangementSection(): JSX.Element {
                 <div className={cx("image-container")}>
                     <Box sx={{ borderRadius: "16px" }}>
                         <Image
-                            src={MusicSheetPlaceholder}
+                            src={MusicSheetBlackBg}
                             alt="music-sheet-illustration"
                             width={400}
                         />
